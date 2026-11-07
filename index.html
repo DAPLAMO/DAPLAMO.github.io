@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>David Plazas · Portafolio</title>
-<meta name="description" content="David Plazas Morales — Técnico en Programación de Software (SENA). Desarrollo web y móvil con PHP, Laravel, MySQL y JavaScript. Neiva, Colombia.">
+<meta name="description" content="David Plazas Morales — Técnico en Programación de Software (SENA). Desarrollo web con PHP, Laravel, MySQL y JavaScript. Estudiante de Psicología. Neiva, Colombia.">
 <meta name="author" content="David Plazas Morales">
 <meta name="color-scheme" content="light dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -209,7 +209,8 @@ section{padding:clamp(3.5rem,8vw,6rem) 0}
 .honor:hover{border-color:var(--gold);transform:translateY(-3px)}
 .honor svg{width:30px;height:30px;color:var(--gold);margin-top:.2rem}
 .honor b{font-family:var(--display);font-size:1.22rem;font-weight:600;line-height:1.2;display:block}
-.honor span{font-size:.92rem;color:var(--ink-soft)}
+.honor div>span{display:block;margin-top:.25rem;font-size:.92rem;color:var(--ink-soft)}
+.honor b span{font-size:inherit;color:inherit}
 
 /* correspondencia */
 .letter{max-width:46rem;margin:0 auto;text-align:center;padding:clamp(2rem,5vw,3.5rem);border:1px solid var(--rule);background:var(--card);position:relative;box-shadow:var(--shadow)}
@@ -286,8 +287,8 @@ footer .caps{color:var(--gold)}
       <h1><span class="gild">David Plazas</span><br><em>Morales</em></h1>
       <p class="role"><b id="typed">Desarrollador full stack</b><span class="caret"></span></p>
       <p class="lead">
-        <span lang="es">Construyo aplicaciones web y móviles con un propósito: la plataforma que organiza la información de mi colegio, una comunidad de orientación entre psicólogos y una app que ayuda a detectar a tiempo señales de alerta en niños. Neiva, Colombia.</span>
-        <span lang="en">I build web and mobile applications with a purpose: the platform that organizes my school's records, a guidance community for psychologists, and an app that helps detect early warning signs in children. Neiva, Colombia.</span>
+        <span lang="es">Construyo aplicaciones web con un propósito: la plataforma que organiza la información de mi colegio, una comunidad de orientación entre psicólogos y una app web que ayuda a detectar a tiempo señales de alerta en niños. Además estudio Psicología, porque entender a las personas es la mitad de dirigir un buen equipo de software. Neiva, Colombia.</span>
+        <span lang="en">I build web applications with a purpose: the platform that organizes my school's records, a guidance community for psychologists, and a web app that helps detect early warning signs in children. I also study Psychology, because understanding people is half of leading a good software team. Neiva, Colombia.</span>
       </p>
       <div class="cta">
         <a class="btn solid mag" href="#obras"><span lang="es">Ver mis obras</span><span lang="en">View my work</span></a>
@@ -331,7 +332,7 @@ footer .caps{color:var(--gold)}
             <li><span lang="es">Acceso por roles y permisos por grado, con consultas preparadas</span><span lang="en">Role and grade-level permissions with prepared statements</span></li>
             <li><span lang="es">Sitio público editable: escuela de padres, talleres, foro y líneas de atención</span><span lang="en">Editable public site: parent school, workshops, forum and help lines</span></li>
           </ul>
-          <a class="more" href="#contacto"><span lang="es">Código disponible a solicitud</span><span lang="en">Code available on request</span> →</a>
+          <a class="more" href="#contacto"><span lang="es">Código a solicitud</span><span lang="en">Code on request</span> →</a>
         </div>
         <div>
           <div class="ledger">
@@ -347,15 +348,15 @@ footer .caps{color:var(--gold)}
 
       <article class="work rv tilt">
         <svg class="corner c1" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c4" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg>
-        <span class="meta caps"><span lang="es">App móvil · salud infantil</span><span lang="en">Mobile app · child health</span></span>
+        <span class="meta caps"><span lang="es">App web para celular · salud infantil</span><span lang="en">Mobile web app · child health</span></span>
         <h3>Vigía<small><span lang="es">Tamizaje pediátrico temprano</span><span lang="en">Early pediatric screening</span></small></h3>
-        <p><span lang="es">Con la cámara del celular busca señales de leucocoria, ictericia y estrabismo, genera un informe y lo comparte por WhatsApp. Es un prototipo de apoyo: no reemplaza al médico.</span><span lang="en">Uses the phone camera to look for signs of leukocoria, jaundice and strabismus, then generates a report to share on WhatsApp. A support prototype: it does not replace a doctor.</span></p>
+        <p><span lang="es">Aplicación web que, desde el navegador del celular, usa la cámara para buscar señales de leucocoria, ictericia y estrabismo, genera un informe y lo comparte por WhatsApp. Es un prototipo de apoyo: no reemplaza al médico.</span><span lang="en">A web app that runs in the phone browser and uses the camera to look for signs of leukocoria, jaundice and strabismus, then generates a report to share on WhatsApp. A support prototype: it does not replace a doctor.</span></p>
         <ul class="pts">
           <li><span lang="es">Tres tamizajes guiados con historial local</span><span lang="en">Three guided screenings with local history</span></li>
           <li><span lang="es">Recolección de imágenes etiquetadas para entrenar modelos</span><span lang="en">Labeled image collection to train models</span></li>
         </ul>
-        <ul class="tags"><li>JavaScript</li><li>Capacitor 6</li><li>Android</li></ul>
-        <a class="more" href="#contacto"><span lang="es">Código disponible a solicitud</span><span lang="en">Code available on request</span> →</a>
+        <ul class="tags"><li>JavaScript</li><li>HTML · CSS</li><li>Web app</li></ul>
+        <a class="more" href="#contacto"><span lang="es">Código a solicitud</span><span lang="en">Code on request</span> →</a>
       </article>
 
       <article class="work rv tilt">
@@ -369,7 +370,7 @@ footer .caps{color:var(--gold)}
           <li><span lang="es">Reportes, moderación y suspensión de cuentas</span><span lang="en">Reports, moderation and account suspension</span></li>
         </ul>
         <ul class="tags"><li>Laravel 12</li><li>Tailwind</li><li>Alpine.js</li><li>MySQL</li></ul>
-        <a class="more" href="#contacto"><span lang="es">Código disponible a solicitud</span><span lang="en">Code available on request</span> →</a>
+        <a class="more" href="#contacto"><span lang="es">Código a solicitud</span><span lang="en">Code on request</span> →</a>
       </article>
 
       <article class="work rv tilt">
@@ -396,8 +397,8 @@ footer .caps{color:var(--gold)}
     <div class="crafts rv">
       <div class="craft"><h3>Backend</h3><ul><li>PHP</li><li>Laravel</li><li>MySQL · MariaDB</li><li>SQL</li><li>Python <em lang="es">aprendiendo</em><em lang="en">learning</em></li></ul></div>
       <div class="craft"><h3>Frontend</h3><ul><li>HTML · CSS</li><li>JavaScript</li><li>Bootstrap · Tailwind</li><li>Alpine.js</li><li>React · TypeScript <em lang="es">aprendiendo</em><em lang="en">learning</em></li></ul></div>
-      <div class="craft"><h3><span lang="es">Móvil y nube</span><span lang="en">Mobile &amp; cloud</span></h3><ul><li>Capacitor · Android</li><li>Railway</li><li>Vercel</li><li>GitHub Pages</li></ul></div>
-      <div class="craft"><h3><span lang="es">Equipo</span><span lang="en">Teamwork</span></h3><ul><li>Git · GitHub</li><li>Scrum · Scrum Master</li><li><span lang="es">Modelado de datos</span><span lang="en">Data modeling</span></li><li><span lang="es">Español nativo</span><span lang="en">Native Spanish</span></li></ul></div>
+      <div class="craft"><h3><span lang="es">Despliegue</span><span lang="en">Deployment</span></h3><ul><li>Railway</li><li>Vercel</li><li>GitHub Pages</li></ul></div>
+      <div class="craft"><h3><span lang="es">Equipo</span><span lang="en">Teamwork</span></h3><ul><li>Git · GitHub</li><li>Scrum · Scrum Master</li><li><span lang="es">Modelado de datos</span><span lang="en">Data modeling</span></li><li><span lang="es">Psicología</span><span lang="en">Psychology</span> <em lang="es">en curso</em><em lang="en">in progress</em></li><li><span lang="es">Español nativo</span><span lang="en">Native Spanish</span></li></ul></div>
     </div>
   </div>
 </section>
@@ -412,6 +413,7 @@ footer .caps{color:var(--gold)}
       <p><span lang="es">Formación técnica desde el colegio y experiencia con proyectos reales.</span><span lang="en">Technical training since high school and hands-on experience with real projects.</span></p>
     </div>
     <ol class="annals">
+      <li class="rv"><span class="when"><span lang="es">En curso</span><span lang="en">In progress</span></span><div><h3><span lang="es">Psicología</span><span lang="en">Psychology</span></h3><p><span lang="es">Estudios de pregrado. Me dan bases para comprender a las personas y los equipos, y así aportar como Scrum Master y en la dirección de proyectos de software.</span><span lang="en">Undergraduate studies that help me understand people and teams, so I can contribute as a Scrum Master and in software project management.</span></p></div></li>
       <li class="rv"><span class="when"><span lang="es">Oct 2025</span><span lang="en">Oct 2025</span></span><div><h3><span lang="es">Técnico en Programación de Software</span><span lang="en">Software Programming Technician</span></h3><p><span lang="es">SENA · Título obtenido en Neiva, en articulación con la media técnica.</span><span lang="en">SENA · Degree earned in Neiva through the technical high school program.</span></p></div></li>
       <li class="rv"><span class="when"><span lang="es">Abr – Nov 2025</span><span lang="en">Apr – Nov 2025</span></span><div><h3><span lang="es">Programador de software · práctica</span><span lang="en">Software developer · internship</span></h3><p><span lang="es">I.E. Técnico Superior · Análisis, desarrollo, pruebas e implementación. Scrum Master del equipo de POE.</span><span lang="en">Técnico Superior school · Analysis, development, testing and deployment. Scrum Master of the POE team.</span></p></div></li>
       <li class="rv"><span class="when">2025</span><div><h3><span lang="es">Bachiller Técnico</span><span lang="en">Technical High School Diploma</span></h3><p><span lang="es">Lideré proyectos institucionales de seguridad, bienestar y entretenimiento con equipos de hasta 58 estudiantes.</span><span lang="en">Led school projects on safety, wellbeing and recreation with teams of up to 58 students.</span></p></div></li>
@@ -449,10 +451,10 @@ footer .caps{color:var(--gold)}
       <i class="logo" style="width:74px;aspect-ratio:313/360;margin:0 auto 1rem" aria-hidden="true"></i>
       <span class="num caps" style="color:var(--wine)">V</span>
       <h2><span lang="es">Conversemos</span><span lang="en">Let's talk</span></h2>
-      <p><span lang="es">Busco mi primer empleo como desarrollador, prácticas o proyectos freelance de desarrollo web y móvil.</span><span lang="en">I am looking for my first developer role, an internship or freelance web and mobile projects.</span></p>
+      <p><span lang="es">Busco mi primer empleo como desarrollador, prácticas o proyectos freelance de desarrollo web.</span><span lang="en">I am looking for my first developer role, an internship or freelance web and mobile projects.</span></p>
       <div class="channels">
         <button type="button" class="btn solid" id="copyMail">davidplazasmorales@gmail.com</button>
-        <a class="btn" href="https://wa.me/573214558862">WhatsApp · +57 321 455 8862</a>
+        <a class="btn" href="https://wa.me/573214558862">WhatsApp</a>
         <a class="btn" href="https://github.com/DAPLAMO">github.com/DAPLAMO</a>
       </div>
       <p class="phone"><span lang="es">Celular</span><span lang="en">Phone</span>: <a href="tel:+573214558862">+57 321 455 8862</a></p>
@@ -478,7 +480,7 @@ footer .caps{color:var(--gold)}
 
   /* ---------- idioma ---------- */
   var titles={es:'David Plazas · Portafolio',en:'David Plazas · Portfolio'};
-  var roles={es:['Desarrollador full stack','Creador de apps web y móviles','Scrum Master','Futuro ingeniero de software'],en:['Full-stack developer','Web & mobile app builder','Scrum Master','Future software engineer']};
+  var roles={es:['Desarrollador full stack','Estudiante de Psicología','Scrum Master','Futuro ingeniero de software'],en:['Full-stack developer','Psychology student','Scrum Master','Future software engineer']};
   var bEs=document.getElementById('lang-es'),bEn=document.getElementById('lang-en');
   function setLang(l,store){
     root.setAttribute('data-lang',l);root.setAttribute('lang',l);document.title=titles[l];
