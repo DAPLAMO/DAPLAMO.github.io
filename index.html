@@ -155,7 +155,7 @@ section{padding:clamp(3.5rem,8vw,6rem) 0}
 .rv{translate:0 16px;transition:translate .9s cubic-bezier(.2,.7,.2,1)} .rv.in{translate:0 0}
 
 /* obras */
-.works{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.6rem}
+.works{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.6rem}
 .work{--px:50%;--py:0%;position:relative;background:var(--card);border:1px solid var(--rule);padding:clamp(1.5rem,3vw,2.3rem);box-shadow:var(--shadow);transition:transform .3s ease-out,translate .9s cubic-bezier(.2,.7,.2,1),border-color .4s}
 .work::before{content:"";position:absolute;inset:7px;border:1px solid var(--rule);pointer-events:none}
 .work::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(380px circle at var(--px) var(--py),rgba(var(--dust),.16),transparent 60%);opacity:0;transition:opacity .4s}
@@ -218,11 +218,14 @@ section{padding:clamp(3.5rem,8vw,6rem) 0}
 .letter h2{font-size:clamp(2.2rem,5vw,3.4rem);font-style:italic;font-weight:500}
 .letter p{color:var(--ink-soft);max-width:32rem;margin:.8rem auto 1.6rem}
 .channels{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center}
+.phone{margin:1.1rem 0 0!important;font-family:var(--caps);font-size:.75rem;letter-spacing:.16em}
+.phone a{color:var(--ink);text-decoration:none}
 .toast{font-family:var(--caps);font-size:.65rem;letter-spacing:.2em;color:var(--gold);min-height:1.2em;margin-top:.8rem}
 
 footer{padding:2.5rem 0 3.5rem;text-align:center;color:var(--ink-soft);font-size:.92rem}
 footer .caps{color:var(--gold)}
 
+@media (max-width:1080px){.works{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:880px){
   .hero-grid,.work.grand{grid-template-columns:1fr}
   .works{grid-template-columns:1fr}
@@ -319,7 +322,7 @@ footer .caps{color:var(--gold)}
       <article class="work grand rv tilt">
         <svg class="corner c1" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c2" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c3" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c4" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg>
         <div>
-          <span class="meta caps"><span lang="es">Obra principal · líder de equipo</span><span lang="en">Flagship · team lead</span></span>
+          <span class="meta caps"><span lang="es">Obra principal · Scrum Master</span><span lang="en">Flagship · Scrum Master</span></span>
           <h3>POE<small><span lang="es">Plataforma de Organización Escolar</span><span lang="en">School Organization Platform</span></small></h3>
           <p><span lang="es">Sistema web para la Institución Educativa Técnico Superior de Neiva. Reúne la información de estudiantes y egresados que antes estaba en papel y hojas de cálculo, con acceso por roles para directivos y docentes.</span><span lang="en">Web system for the Técnico Superior school in Neiva. It brings together student and alumni records that used to live on paper and spreadsheets, with role-based access for administrators and teachers.</span></p>
           <ul class="pts">
@@ -328,7 +331,7 @@ footer .caps{color:var(--gold)}
             <li><span lang="es">Acceso por roles y permisos por grado, con consultas preparadas</span><span lang="en">Role and grade-level permissions with prepared statements</span></li>
             <li><span lang="es">Sitio público editable: escuela de padres, talleres, foro y líneas de atención</span><span lang="en">Editable public site: parent school, workshops, forum and help lines</span></li>
           </ul>
-          <a class="more" href="https://github.com/DAPLAMO/POE-plataforma-escolar"><span lang="es">Ver repositorio</span><span lang="en">View repository</span> →</a>
+          <a class="more" href="#contacto"><span lang="es">Código disponible a solicitud</span><span lang="en">Code available on request</span> →</a>
         </div>
         <div>
           <div class="ledger">
@@ -337,8 +340,8 @@ footer .caps{color:var(--gold)}
             <div><b>4</b><span lang="es">desarrolladores</span><span lang="en">developers</span></div>
           </div>
           <ul class="tags"><li>PHP</li><li>MySQL</li><li>Bootstrap 5</li><li>HTML · CSS</li><li>Git</li></ul>
-          <p class="seal"><span lang="es">Lideré el equipo y desarrollé caracterización, egresados, paginación y las mejoras de seguridad de la versión final (2025).</span><span lang="en">I led the team and built student profiling, alumni, pagination and the security improvements in the final release (2025).</span></p>
-          <p class="copy">© 2025 <span lang="es">David Plazas Morales y equipo POE. Todos los derechos reservados.</span><span lang="en">David Plazas Morales and the POE team. All rights reserved.</span></p>
+          <p class="seal"><span lang="es">Fui Scrum Master del equipo y desarrollé caracterización, egresados, paginación y las mejoras de seguridad de la versión final (2025).</span><span lang="en">I was the team's Scrum Master and built student profiling, alumni, pagination and the security improvements in the final release (2025).</span></p>
+          <p class="copy">© 2025 Institución Educativa Técnico Superior de Neiva. <span lang="es">Todos los derechos reservados.</span><span lang="en">All rights reserved.</span></p>
         </div>
       </article>
 
@@ -378,14 +381,6 @@ footer .caps{color:var(--gold)}
         <ul class="tags"><li>HTML</li><li>CSS</li><li>Bootstrap 5</li></ul>
         <a class="more" href="https://github.com/DAPLAMO/david-pilatos"><span lang="es">Ver repositorio</span><span lang="en">View repository</span> →</a>
       </article>
-
-      <article class="work rv tilt">
-        <svg class="corner c1" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c4" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg>
-        <span class="meta caps"><span lang="es">Cliente real · 2024</span><span lang="en">Real client · 2024</span></span>
-        <h3>FUNDEAMOR<small><span lang="es">Sitio web de la fundación</span><span lang="en">Foundation website</span></small></h3>
-        <p><span lang="es">Desarrollé y administré el sitio web de la fundación: estructura de contenidos, diseño y actualizaciones.</span><span lang="en">I built and maintained the foundation's website: content structure, design and updates.</span></p>
-        <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
-      </article>
     </div>
   </div>
 </section>
@@ -403,7 +398,7 @@ footer .caps{color:var(--gold)}
       <div class="craft"><h3>Backend</h3><ul><li>PHP</li><li>Laravel</li><li>MySQL · MariaDB</li><li>SQL</li><li>Python <em lang="es">aprendiendo</em><em lang="en">learning</em></li></ul></div>
       <div class="craft"><h3>Frontend</h3><ul><li>HTML · CSS</li><li>JavaScript</li><li>Bootstrap · Tailwind</li><li>Alpine.js</li><li>React · TypeScript <em lang="es">aprendiendo</em><em lang="en">learning</em></li></ul></div>
       <div class="craft"><h3><span lang="es">Móvil y nube</span><span lang="en">Mobile &amp; cloud</span></h3><ul><li>Capacitor · Android</li><li>Railway</li><li>Vercel</li><li>GitHub Pages</li></ul></div>
-      <div class="craft"><h3><span lang="es">Equipo</span><span lang="en">Teamwork</span></h3><ul><li>Git · GitHub</li><li><span lang="es">Liderazgo de equipo</span><span lang="en">Team leadership</span></li><li><span lang="es">Modelado de datos</span><span lang="en">Data modeling</span></li><li><span lang="es">Español nativo</span><span lang="en">Native Spanish</span></li></ul></div>
+      <div class="craft"><h3><span lang="es">Equipo</span><span lang="en">Teamwork</span></h3><ul><li>Git · GitHub</li><li>Scrum · Scrum Master</li><li><span lang="es">Modelado de datos</span><span lang="en">Data modeling</span></li><li><span lang="es">Español nativo</span><span lang="en">Native Spanish</span></li></ul></div>
     </div>
   </div>
 </section>
@@ -419,9 +414,8 @@ footer .caps{color:var(--gold)}
     </div>
     <ol class="annals">
       <li class="rv"><span class="when"><span lang="es">Oct 2025</span><span lang="en">Oct 2025</span></span><div><h3><span lang="es">Técnico en Programación de Software</span><span lang="en">Software Programming Technician</span></h3><p><span lang="es">SENA · Título obtenido en Neiva, en articulación con la media técnica.</span><span lang="en">SENA · Degree earned in Neiva through the technical high school program.</span></p></div></li>
-      <li class="rv"><span class="when"><span lang="es">Abr – Nov 2025</span><span lang="en">Apr – Nov 2025</span></span><div><h3><span lang="es">Programador de software · práctica</span><span lang="en">Software developer · internship</span></h3><p><span lang="es">I.E. Técnico Superior · Análisis, desarrollo, pruebas e implementación. Coordinación del equipo de POE.</span><span lang="en">Técnico Superior school · Analysis, development, testing and deployment. Led the POE team.</span></p></div></li>
+      <li class="rv"><span class="when"><span lang="es">Abr – Nov 2025</span><span lang="en">Apr – Nov 2025</span></span><div><h3><span lang="es">Programador de software · práctica</span><span lang="en">Software developer · internship</span></h3><p><span lang="es">I.E. Técnico Superior · Análisis, desarrollo, pruebas e implementación. Scrum Master del equipo de POE.</span><span lang="en">Técnico Superior school · Analysis, development, testing and deployment. Scrum Master of the POE team.</span></p></div></li>
       <li class="rv"><span class="when">2025</span><div><h3><span lang="es">Bachiller Técnico</span><span lang="en">Technical High School Diploma</span></h3><p><span lang="es">Lideré proyectos institucionales de seguridad, bienestar y entretenimiento con equipos de hasta 58 estudiantes.</span><span lang="en">Led school projects on safety, wellbeing and recreation with teams of up to 58 students.</span></p></div></li>
-      <li class="rv"><span class="when">2024</span><div><h3><span lang="es">Desarrollador web · FUNDEAMOR</span><span lang="en">Web developer · FUNDEAMOR</span></h3><p><span lang="es">Construcción y administración del sitio web de la fundación.</span><span lang="en">Built and maintained the foundation's website.</span></p></div></li>
       <li class="rv"><span class="when">2022 – 2023</span><div><h3>TecnoAcademia SENA</h3><p><span lang="es">Robótica, prototipos mecánicos, automatización con FESTO e innovación en ingeniería y TIC.</span><span lang="en">Robotics, mechanical prototyping, FESTO automation and innovation in engineering and ICT.</span></p></div></li>
     </ol>
   </div>
@@ -459,8 +453,10 @@ footer .caps{color:var(--gold)}
       <p><span lang="es">Busco mi primer empleo como desarrollador, prácticas o proyectos freelance de desarrollo web y móvil.</span><span lang="en">I am looking for my first developer role, an internship or freelance web and mobile projects.</span></p>
       <div class="channels">
         <button type="button" class="btn solid" id="copyMail">davidplazasmorales@gmail.com</button>
+        <a class="btn" href="https://wa.me/573214558862">WhatsApp · +57 321 455 8862</a>
         <a class="btn" href="https://github.com/DAPLAMO">github.com/DAPLAMO</a>
       </div>
+      <p class="phone"><span lang="es">Celular</span><span lang="en">Phone</span>: <a href="tel:+573214558862">+57 321 455 8862</a></p>
       <p class="toast" id="toast" aria-live="polite"></p>
     </div>
   </div>
@@ -470,7 +466,7 @@ footer .caps{color:var(--gold)}
 <footer>
   <div class="flourish" aria-hidden="true" style="margin-bottom:1.2rem"><svg viewBox="0 0 42 18" fill="none" stroke="currentColor" stroke-width="1"><path d="M1 9h12M29 9h12"/><path d="M21 2l5 7-5 7-5-7z"/><circle cx="21" cy="9" r="1.5" fill="currentColor"/></svg></div>
   <p class="caps">David Plazas Morales · Neiva, Colombia</p>
-  <p>© 2026 David Plazas Morales. <span lang="es">Todos los derechos reservados. El escudo, los textos y el código de este sitio y de los proyectos POE y Vigía no pueden copiarse ni usarse sin autorización escrita.</span><span lang="en">All rights reserved. The crest, text and code of this site and of the POE and Vigía projects may not be copied or used without written permission.</span></p>
+  <p>© 2026 David Plazas Morales. <span lang="es">Todos los derechos reservados. El escudo, los textos y el código de este sitio y del proyecto Vigía no pueden copiarse ni usarse sin autorización escrita. POE es propiedad de la Institución Educativa Técnico Superior de Neiva.</span><span lang="en">All rights reserved. The crest, text and code of this site and of the Vigía project may not be copied or used without written permission. POE is owned by the Institución Educativa Técnico Superior, Neiva.</span></p>
 </footer>
 
 <script>
@@ -483,7 +479,7 @@ footer .caps{color:var(--gold)}
 
   /* ---------- idioma ---------- */
   var titles={es:'David Plazas · Portafolio',en:'David Plazas · Portfolio'};
-  var roles={es:['Desarrollador full stack','Creador de apps web y móviles','Líder de equipo','Futuro ingeniero de software'],en:['Full-stack developer','Web & mobile app builder','Team lead','Future software engineer']};
+  var roles={es:['Desarrollador full stack','Creador de apps web y móviles','Scrum Master','Futuro ingeniero de software'],en:['Full-stack developer','Web & mobile app builder','Scrum Master','Future software engineer']};
   var bEs=document.getElementById('lang-es'),bEn=document.getElementById('lang-en');
   function setLang(l,store){
     root.setAttribute('data-lang',l);root.setAttribute('lang',l);document.title=titles[l];
