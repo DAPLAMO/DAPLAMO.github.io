@@ -134,11 +134,44 @@ body.moved .ring,body.moved .pin{opacity:1}
 .orbit i{position:absolute;top:-4px;left:calc(50% - 4px);width:8px;height:8px;transform:rotate(45deg);background:var(--gold)}
 .orbit.o2 i{background:var(--wine);top:auto;bottom:-4px}
 @keyframes spin{to{transform:rotate(360deg)}}
-.crest-wrap{position:relative;width:72%;transition:transform .25s ease-out;transform-style:preserve-3d}
-.crest-wrap .logo{filter:drop-shadow(0 22px 30px rgba(40,24,8,.45))}
-.crest-wrap .shine{position:absolute;inset:0;-webkit-mask:var(--logo) center/contain no-repeat;mask:var(--logo) center/contain no-repeat;background:linear-gradient(115deg,transparent 35%,rgba(255,248,220,.75) 48%,transparent 60%);background-size:300% 100%;animation:sweep 6s ease-in-out infinite;mix-blend-mode:overlay}
 @keyframes sweep{0%,55%{background-position:120% 0}100%{background-position:-120% 0}}
 .motto{position:absolute;bottom:-1.2rem;left:0;right:0;text-align:center;color:var(--gold)}
+
+/* carta de baraja */
+.playcard{all:unset;position:relative;width:60%;aspect-ratio:5/7;cursor:pointer;transform-style:preserve-3d;transition:transform .25s ease-out;z-index:1}
+.playcard:focus-visible{outline:2px solid var(--gold);outline-offset:8px;border-radius:20px}
+.flipper{position:absolute;inset:0;transform-style:preserve-3d;transition:transform 1s cubic-bezier(.6,0,.2,1)}
+.playcard.flipped .flipper{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;border-radius:18px;-webkit-backface-visibility:hidden;backface-visibility:hidden;border:1px solid var(--gold);box-shadow:0 40px 60px -30px rgba(40,20,6,.6),0 0 0 1px rgba(var(--dust),.15) inset;display:grid;place-items:center;overflow:hidden}
+.face::before{content:"";position:absolute;inset:9px;border:1px solid var(--rule);border-radius:12px;pointer-events:none}
+.front{background:radial-gradient(circle at 50% 42%,var(--card),var(--paper-2))}
+.logo-box{position:relative;width:74%;aspect-ratio:313/360;display:block}
+.logo-box .logo{position:absolute;inset:0;filter:drop-shadow(0 16px 22px rgba(40,24,8,.45))}
+.logo-box .shine{position:absolute;inset:0;-webkit-mask:var(--logo) center/contain no-repeat;mask:var(--logo) center/contain no-repeat;background:linear-gradient(115deg,transparent 35%,rgba(255,248,220,.75) 48%,transparent 60%);background-size:300% 100%;animation:sweep 6s ease-in-out infinite;mix-blend-mode:overlay}
+.idx{position:absolute;display:grid;justify-items:center;font-family:var(--display);font-weight:700;font-size:1.7rem;line-height:.95;color:var(--wine)}
+.idx i,.rank i{display:block;width:.3em;height:.3em;margin-top:.22em;transform:rotate(45deg);background:var(--gold)}
+.tl{top:16px;left:18px} .br{bottom:16px;right:18px;transform:rotate(180deg)}
+.back{transform:rotateY(180deg);background:
+  radial-gradient(circle at 50% 44%,rgba(0,0,0,0) 0 27%,rgba(0,0,0,.18) 60%),
+  repeating-linear-gradient(45deg,#7a1b20 0 9px,#651419 9px 18px),#7a1b20;border-color:#d2a84a}
+.back::before{border-color:rgba(240,207,122,.55)}
+.medal{width:46%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:#f4ecdc;border:3px solid #d2a84a;box-shadow:0 10px 24px rgba(0,0,0,.35);margin-bottom:12%}
+.medal .logo{display:block;width:62%;aspect-ratio:313/360}
+.joker{position:absolute;bottom:17%;left:0;right:0;text-align:center;color:#f0cf7a;font-size:.78rem;letter-spacing:.42em}
+
+/* mi código */
+.code3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem}
+.rule3{position:relative;text-align:center;padding:2.2rem 1.6rem 2rem;background:var(--card);border:1px solid var(--rule);box-shadow:var(--shadow);transition:border-color .4s,transform .4s}
+.rule3::before{content:"";position:absolute;inset:7px;border:1px solid var(--rule);pointer-events:none}
+.rule3:hover{border-color:var(--gold);transform:translateY(-4px)}
+.rule3 svg{width:40px;height:40px;color:var(--gold);margin:0 auto .8rem;display:block}
+.rule3 .rn{font-family:var(--caps);font-size:.72rem;letter-spacing:.32em;color:var(--wine)}
+.rule3 h3{font-size:clamp(2rem,3.4vw,2.6rem);margin:.35rem 0 .7rem}
+.rule3 p{margin:0;color:var(--ink-soft)}
+
+/* rango de carta en cada obra */
+.rank{position:absolute;top:18px;right:20px;display:grid;justify-items:center;font-family:var(--display);font-weight:700;font-size:1.9rem;line-height:.9;color:var(--wine)}
+.work.grand .rank{top:auto;bottom:18px;transform:rotate(180deg)}
 
 /* ornamentos */
 .flourish{display:flex;align-items:center;justify-content:center;gap:1rem;color:var(--gold);margin:0 auto;max-width:28rem}
@@ -163,7 +196,7 @@ section{padding:clamp(3.5rem,8vw,6rem) 0}
 .work .corner{position:absolute;width:22px;height:22px;color:var(--gold)}
 .work .c1{top:-1px;left:-1px} .work .c2{top:-1px;right:-1px;transform:scaleX(-1)} .work .c3{bottom:-1px;left:-1px;transform:scaleY(-1)} .work .c4{bottom:-1px;right:-1px;transform:scale(-1)}
 .work.grand{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:2.4rem}
-.work .meta{color:var(--gold)}
+.work .meta{color:var(--gold);display:block;padding-right:2.6rem}
 .work h3{font-size:clamp(1.9rem,3.4vw,2.7rem);margin:.4rem 0 .8rem}
 .work h3 small{display:block;font-size:.5em;font-style:italic;font-weight:500;color:var(--ink-soft);margin-top:.3rem}
 .work p{margin:0 0 1rem;color:var(--ink-soft)}
@@ -231,11 +264,13 @@ footer .caps{color:var(--gold)}
   .hero-grid,.work.grand{grid-template-columns:1fr}
   .works{grid-template-columns:1fr}
   .crest-stage{max-width:320px;order:-1}
+  .code3{grid-template-columns:1fr}
   .craft+.craft{border-left:0;border-top:1px solid var(--rule)}
 }
 @media (max-width:600px){
   .bar nav{order:3;width:100%}
   .bar nav ul{justify-content:space-between;gap:.6rem}
+  .bar nav ul{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:1.1rem} .bar nav ul::-webkit-scrollbar{display:none} .bar nav a{white-space:nowrap;font-size:.64rem;letter-spacing:.14em}
   .annals::before{left:6px}
   .annals li{grid-template-columns:1fr;gap:.2rem;padding-left:2rem}
   .annals li::after{left:1px}
@@ -260,6 +295,7 @@ footer .caps{color:var(--gold)}
     <a class="crest-link" href="#inicio"><i class="logo" style="width:38px;aspect-ratio:313/360" aria-hidden="true"></i><span>D · PLAZAS</span></a>
     <nav aria-label="Secciones">
       <ul>
+        <li><a href="#codigo"><span lang="es">Código</span><span lang="en">Code</span></a></li>
         <li><a href="#obras"><span lang="es">Obras</span><span lang="en">Work</span></a></li>
         <li><a href="#oficio"><span lang="es">Oficio</span><span lang="en">Craft</span></a></li>
         <li><a href="#trayectoria"><span lang="es">Trayectoria</span><span lang="en">Journey</span></a></li>
@@ -283,12 +319,12 @@ footer .caps{color:var(--gold)}
 <header class="hero" id="inicio">
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow caps"><span lang="es">Técnico en Programación de Software · SENA</span><span lang="en">Software Programming Technician · SENA</span></p>
+      <p class="eyebrow caps"><span lang="es">Full stack · Scrum Master · Psicología</span><span lang="en">Full stack · Scrum Master · Psychology</span></p>
       <h1><span class="gild">David Plazas</span><br><em>Morales</em></h1>
-      <p class="role"><b id="typed">Desarrollador full stack</b><span class="caret"></span></p>
+      <p class="role"><b id="typed">El comodín de tu equipo</b><span class="caret"></span></p>
       <p class="lead">
-        <span lang="es">Construyo aplicaciones web con un propósito: la plataforma que organiza la información de mi colegio, una comunidad de orientación entre psicólogos y una app web que ayuda a detectar a tiempo señales de alerta en niños. Además estudio Psicología, porque entender a las personas es la mitad de dirigir un buen equipo de software. Neiva, Colombia.</span>
-        <span lang="en">I build web applications with a purpose: the platform that organizes my school's records, a guidance community for psychologists, and a web app that helps detect early warning signs in children. I also study Psychology, because understanding people is half of leading a good software team. Neiva, Colombia.</span>
+        <span lang="es">Soy el comodín de tu equipo: desarrollo de punta a punta, coordino con Scrum y estudio Psicología para entender a las personas detrás de cada requerimiento. Me enfoco en lo importante y cumplo lo que prometo. Neiva, Colombia.</span>
+        <span lang="en">I am your team's wild card: I build end to end, coordinate with Scrum and study Psychology to understand the people behind every requirement. I focus on what matters and deliver what I promise. Neiva, Colombia.</span>
       </p>
       <div class="cta">
         <a class="btn solid mag" href="#obras"><span lang="es">Ver mis obras</span><span lang="en">View my work</span></a>
@@ -298,12 +334,20 @@ footer .caps{color:var(--gold)}
     <div class="crest-stage" id="stage">
       <div class="halo"></div>
       <div class="orbit o1"><i></i></div>
-      <div class="orbit o2"><i></i></div>
-      <div class="crest-wrap" id="crest">
-        <div class="logo" role="img" aria-label="Escudo de David Plazas" style="width:100%;aspect-ratio:313/360"></div>
-        <div class="shine"></div>
-      </div>
-      <p class="motto caps"><span lang="es">Disciplina · Código · Propósito</span><span lang="en">Discipline · Code · Purpose</span></p>
+      <button type="button" class="playcard" id="crest" aria-label="Voltear la carta / Flip the card">
+        <span class="flipper">
+          <span class="face front">
+            <span class="idx tl">D<i></i></span>
+            <span class="logo-box"><span class="logo" role="img" aria-label="Escudo de David Plazas"></span><span class="shine"></span></span>
+            <span class="idx br">D<i></i></span>
+          </span>
+          <span class="face back">
+            <span class="medal"><span class="logo"></span></span>
+            <span class="joker caps"><span lang="es">El comodín</span><span lang="en">The wild card</span></span>
+          </span>
+        </span>
+      </button>
+      <p class="motto caps"><span lang="es">Familia · Honor · Código</span><span lang="en">Family · Honor · Code</span></p>
     </div>
   </div>
 </header>
@@ -311,16 +355,49 @@ footer .caps{color:var(--gold)}
 <div class="flourish" aria-hidden="true"><svg viewBox="0 0 42 18" fill="none" stroke="currentColor" stroke-width="1"><path d="M1 9h12M29 9h12"/><path d="M21 2l5 7-5 7-5-7z"/><circle cx="21" cy="9" r="1.5" fill="currentColor"/></svg></div>
 
 <main>
-<section id="obras">
+<section id="codigo">
   <div class="wrap">
     <div class="chapter rv">
       <span class="num">I</span>
+      <h2><span lang="es">Mi código</span><span lang="en">My Code</span></h2>
+      <p><span lang="es">Tres reglas de mi casa que hoy aplico al software.</span><span lang="en">Three rules from my family that I now apply to software.</span></p>
+    </div>
+    <div class="code3">
+      <div class="rule3 rv">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="14" cy="14" r="8"/><path d="M20 20l14 14M28 28l4-4M31 31l3-3"/></svg>
+        <span class="rn">I</span>
+        <h3><span lang="es">Resuelvo</span><span lang="en">I solve</span></h3>
+        <p><span lang="es">Base de datos, servidor o interfaz: entro donde haga falta. Trabajo de punta a punta con PHP, Laravel, MySQL y JavaScript.</span><span lang="en">Database, server or interface: I step in wherever I am needed. I work end to end with PHP, Laravel, MySQL and JavaScript.</span></p>
+      </div>
+      <div class="rule3 rv">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="13" cy="15" r="5"/><circle cx="27" cy="15" r="5"/><path d="M4 33c1-6 5-9 9-9s8 3 9 9M18 33c1-6 5-9 9-9s8 3 9 9"/></svg>
+        <span class="rn">II</span>
+        <h3><span lang="es">Entiendo</span><span lang="en">I understand</span></h3>
+        <p><span lang="es">Estudio Psicología. Entender al usuario y al equipo evita rehacer trabajo, y por eso me desempeño como Scrum Master.</span><span lang="en">I study Psychology. Understanding users and teammates prevents rework, which is why I work as a Scrum Master.</span></p>
+      </div>
+      <div class="rule3 rv">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M20 4l13 5v9c0 9-6 15-13 18C13 33 7 27 7 18V9z"/><path d="M14 20l4 4 8-9"/></svg>
+        <span class="rn">III</span>
+        <h3><span lang="es">Cumplo</span><span lang="en">I deliver</span></h3>
+        <p><span lang="es">Me enfoco en lo que importa, planeo y entrego. Lo que se promete, se cumple.</span><span lang="en">I focus on what matters, plan and deliver. What is promised gets done.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="flourish" aria-hidden="true"><svg viewBox="0 0 42 18" fill="none" stroke="currentColor" stroke-width="1"><path d="M1 9h12M29 9h12"/><path d="M21 2l5 7-5 7-5-7z"/><circle cx="21" cy="9" r="1.5" fill="currentColor"/></svg></div>
+
+<section id="obras">
+  <div class="wrap">
+    <div class="chapter rv">
+      <span class="num">II</span>
       <h2><span lang="es">Obras</span><span lang="en">Selected Work</span></h2>
       <p><span lang="es">Software en uso real y prototipos con propósito.</span><span lang="en">Software in real use and prototypes with a purpose.</span></p>
     </div>
 
     <div class="works">
       <article class="work grand rv tilt">
+        <span class="rank" aria-hidden="true">A<i></i></span>
         <svg class="corner c1" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c2" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c3" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c4" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg>
         <div>
           <span class="meta caps"><span lang="es">Obra principal · Scrum Master</span><span lang="en">Flagship · Scrum Master</span></span>
@@ -348,6 +425,7 @@ footer .caps{color:var(--gold)}
 
       <article class="work rv tilt">
         <svg class="corner c1" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c4" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg>
+        <span class="rank" aria-hidden="true">Q<i></i></span>
         <span class="meta caps"><span lang="es">App web para celular · salud infantil</span><span lang="en">Mobile web app · child health</span></span>
         <h3>Vigía<small><span lang="es">Tamizaje pediátrico temprano</span><span lang="en">Early pediatric screening</span></small></h3>
         <p><span lang="es">Aplicación web que, desde el navegador del celular, usa la cámara para buscar señales de leucocoria, ictericia y estrabismo, genera un informe y lo comparte por WhatsApp. Es un prototipo de apoyo: no reemplaza al médico.</span><span lang="en">A web app that runs in the phone browser and uses the camera to look for signs of leukocoria, jaundice and strabismus, then generates a report to share on WhatsApp. A support prototype: it does not replace a doctor.</span></p>
@@ -361,6 +439,7 @@ footer .caps{color:var(--gold)}
 
       <article class="work rv tilt">
         <svg class="corner c1" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c4" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg>
+        <span class="rank" aria-hidden="true">K<i></i></span>
         <span class="meta caps"><span lang="es">Plataforma social · Laravel</span><span lang="en">Social platform · Laravel</span></span>
         <h3>PsicoSocial<small><span lang="es">Comunidad de orientación profesional</span><span lang="en">Professional guidance community</span></small></h3>
         <p><span lang="es">Las personas plantean consultas y solo psicólogos verificados responden. Empezó como red social y evolucionó a su versión 2.0.</span><span lang="en">People ask questions and only verified psychologists can answer. It began as a social network and grew into version 2.0.</span></p>
@@ -375,6 +454,7 @@ footer .caps{color:var(--gold)}
 
       <article class="work rv tilt">
         <svg class="corner c1" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c4" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg>
+        <span class="rank" aria-hidden="true">J<i></i></span>
         <span class="meta caps"><span lang="es">Práctica SENA · frontend</span><span lang="en">SENA practice · frontend</span></span>
         <h3>Pilatos<small><span lang="es">Réplica de tienda en línea</span><span lang="en">Online store replica</span></small></h3>
         <p><span lang="es">Réplica de la interfaz de una tienda de ropa, hecha para practicar maquetación responsive: catálogos, ofertas y formulario de pedidos.</span><span lang="en">A replica of a clothing store's interface, built to practice responsive layout: catalogs, sales and an order form.</span></p>
@@ -390,7 +470,7 @@ footer .caps{color:var(--gold)}
 <section id="oficio">
   <div class="wrap">
     <div class="chapter rv">
-      <span class="num">II</span>
+      <span class="num">III</span>
       <h2><span lang="es">El oficio</span><span lang="en">The Craft</span></h2>
       <p><span lang="es">Herramientas que domino en proyectos reales y las que estoy aprendiendo.</span><span lang="en">Tools I use in real projects, and the ones I am learning.</span></p>
     </div>
@@ -408,7 +488,7 @@ footer .caps{color:var(--gold)}
 <section id="trayectoria">
   <div class="wrap">
     <div class="chapter rv">
-      <span class="num">III</span>
+      <span class="num">IV</span>
       <h2><span lang="es">Trayectoria</span><span lang="en">Journey</span></h2>
       <p><span lang="es">Formación técnica desde el colegio y experiencia con proyectos reales.</span><span lang="en">Technical training since high school and hands-on experience with real projects.</span></p>
     </div>
@@ -427,7 +507,7 @@ footer .caps{color:var(--gold)}
 <section id="distinciones">
   <div class="wrap">
     <div class="chapter rv">
-      <span class="num">IV</span>
+      <span class="num">V</span>
       <h2><span lang="es">Distinciones</span><span lang="en">Certifications</span></h2>
       <p><span lang="es">Cursos terminados, con su intensidad horaria.</span><span lang="en">Completed courses and their hours.</span></p>
     </div>
@@ -449,7 +529,7 @@ footer .caps{color:var(--gold)}
   <div class="wrap">
     <div class="letter rv">
       <i class="logo" style="width:74px;aspect-ratio:313/360;margin:0 auto 1rem" aria-hidden="true"></i>
-      <span class="num caps" style="color:var(--wine)">V</span>
+      <span class="num caps" style="color:var(--wine)">VI</span>
       <h2><span lang="es">Conversemos</span><span lang="en">Let's talk</span></h2>
       <p><span lang="es">Busco mi primer empleo como desarrollador, prácticas o proyectos freelance de desarrollo web.</span><span lang="en">I am looking for my first developer role, an internship or freelance web and mobile projects.</span></p>
       <div class="channels">
@@ -480,7 +560,7 @@ footer .caps{color:var(--gold)}
 
   /* ---------- idioma ---------- */
   var titles={es:'David Plazas · Portafolio',en:'David Plazas · Portfolio'};
-  var roles={es:['Desarrollador full stack','Estudiante de Psicología','Scrum Master','Futuro ingeniero de software'],en:['Full-stack developer','Psychology student','Scrum Master','Future software engineer']};
+  var roles={es:['El comodín de tu equipo','Desarrollador full stack','Scrum Master','Lo que se necesite, bien hecho'],en:["Your team's wild card",'Full-stack developer','Scrum Master','Whatever it takes, done right']};
   var bEs=document.getElementById('lang-es'),bEn=document.getElementById('lang-en');
   function setLang(l,store){
     root.setAttribute('data-lang',l);root.setAttribute('lang',l);document.title=titles[l];
@@ -542,8 +622,9 @@ footer .caps{color:var(--gold)}
   if(reduce){motes.forEach(function(m){ctx.beginPath();ctx.fillStyle='rgba('+dc+',.4)';ctx.arc(m.x,m.y,m.r,0,6.283);ctx.fill();});}else requestAnimationFrame(frame);
   addEventListener('pointerdown',function(e){if(reduce)return;for(var k=0;k<14;k++){var m=mote(false);m.x=e.clientX;m.y=e.clientY;var a=Math.random()*6.283,s=.6+Math.random()*2.2;m.vx=Math.cos(a)*s;m.vy=Math.sin(a)*s;m.r=1+Math.random()*2.2;m.s=1;motes.push(m);} if(motes.length>200)motes.splice(0,motes.length-200);});
 
-  /* ---------- escudo que sigue el cursor ---------- */
+  /* ---------- carta: gira con el cursor y se voltea con un clic ---------- */
   var crest=document.getElementById('crest');
+  crest.addEventListener('click',function(){crest.classList.toggle('flipped');});
   if(fine&&!reduce)addEventListener('pointermove',function(e){var r=crest.getBoundingClientRect(),x=(e.clientX-(r.left+r.width/2))/innerWidth,y=(e.clientY-(r.top+r.height/2))/innerHeight;crest.style.transform='perspective(800px) rotateY('+(x*22)+'deg) rotateX('+(-y*22)+'deg)';},{passive:true});
 
   /* ---------- obras: brillo e inclinación ---------- */
