@@ -573,7 +573,7 @@ footer p{margin:4px 0}
   var gc=gold(), last=0;
   function frame(t){if(!run)return;requestAnimationFrame(frame);if(t-last<45)return;last=t;
     cx.clearRect(0,0,W,H);cx.font='500 '+fs+'px "JetBrains Mono",monospace';
-    for(var i=0;i<cols.length;i++){var c=cols[i];if(c.c>.75){c.y+=c.v*6;if(c.y>H+200){c.y=Math.random()*-300;c.v=.6+Math.random()*1.6}continue}
+    for(var i=0;i<cols.length;i++){var c=cols[i];if(c.c>.75){c.y+=c.v*6;if(c.y>H+200){c.y=Math.random()*-300;c.v=.6+Math.random()*1.6;c.c=Math.random()}continue}
       for(var k=0;k<14;k++){var y=c.y-k*fs;if(y<-fs||y>H)continue;cx.globalAlpha=(1-k/16)*(k===0?1:.8);cx.fillStyle=k===0?'#fff4d0':gc;cx.fillText(((i*7+k+Math.floor(c.y/fs))%3===0)?'1':'0',i*fs,y)}
       c.y+=c.v*6;if(c.y-14*fs>H){c.y=Math.random()*-200;c.v=.6+Math.random()*1.6;c.c=Math.random()}}
     cx.globalAlpha=1}
