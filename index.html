@@ -138,7 +138,7 @@ body.moved .ring,body.moved .pin{opacity:1}
 .motto{position:absolute;bottom:-1.2rem;left:0;right:0;text-align:center;color:var(--gold)}
 
 /* carta de baraja */
-.playcard{all:unset;position:relative;width:60%;aspect-ratio:5/7;cursor:pointer;transform-style:preserve-3d;transition:transform .25s ease-out;z-index:1}
+.playcard{position:relative;width:60%;aspect-ratio:5/7;transform-style:preserve-3d;transition:transform .25s ease-out;z-index:1}
 .playcard:focus-visible{outline:2px solid var(--gold);outline-offset:8px;border-radius:20px}
 .flipper{position:absolute;inset:0;transform-style:preserve-3d;transition:transform 1s cubic-bezier(.6,0,.2,1)}
 .playcard.flipped .flipper{transform:rotateY(180deg)}
@@ -297,7 +297,7 @@ footer .caps{color:var(--gold)}
     <a class="crest-link" href="#inicio"><i class="logo" style="width:38px;aspect-ratio:313/360" aria-hidden="true"></i><span>D · PLAZAS</span></a>
     <nav aria-label="Secciones">
       <ul>
-        <li><a href="#codigo"><span lang="es">Código</span><span lang="en">Code</span></a></li>
+        <li><a href="#codigo"><span lang="es">Método</span><span lang="en">Method</span></a></li>
         <li><a href="#obras"><span lang="es">Obras</span><span lang="en">Work</span></a></li>
         <li><a href="#oficio"><span lang="es">Oficio</span><span lang="en">Craft</span></a></li>
         <li><a href="#trayectoria"><span lang="es">Trayectoria</span><span lang="en">Journey</span></a></li>
@@ -323,7 +323,7 @@ footer .caps{color:var(--gold)}
     <div>
       <p class="eyebrow caps"><span lang="es">Backend · Bases de datos · Desarrollo con IA</span><span lang="en">Backend · Databases · AI-assisted development</span></p>
       <h1><span class="gild">David Plazas</span><br><em>Morales</em></h1>
-      <p class="role"><b id="typed">El comodín de tu equipo</b><span class="caret"></span></p>
+      <p class="role"><b id="typed">Desarrollador backend</b><span class="caret"></span></p>
       <p class="lead">
         <span lang="es">Técnico en Programación de Software del SENA. Diseño bases de datos y la lógica del backend en PHP y MySQL: modelo relacional, roles, permisos y seguridad. Uso la IA como herramienta de desarrollo: defino la arquitectura, doy las instrucciones y reviso que el código sea correcto y eficiente. Neiva, Colombia.</span>
         <span lang="en">Software Programming Technician (SENA). I design databases and backend logic in PHP and MySQL: relational models, roles, permissions and security. I use AI as a development tool: I define the architecture, give the instructions and review that the code is correct and efficient. Neiva, Colombia.</span>
@@ -336,20 +336,13 @@ footer .caps{color:var(--gold)}
     <div class="crest-stage" id="stage">
       <div class="halo"></div>
       <div class="orbit o1"><i></i></div>
-      <button type="button" class="playcard" id="crest" aria-label="Voltear la carta / Flip the card">
+      <div class="playcard" id="crest">
         <span class="flipper">
           <span class="face front">
-            <span class="idx tl">D<i></i></span>
             <span class="logo-box"><span class="logo" role="img" aria-label="Escudo de David Plazas"></span><span class="shine"></span></span>
-            <span class="idx br">D<i></i></span>
-          </span>
-          <span class="face back">
-            <span class="medal"><span class="logo"></span></span>
-            <span class="joker caps"><span lang="es">El comodín</span><span lang="en">The wild card</span></span>
           </span>
         </span>
-      </button>
-      <p class="motto caps"><span lang="es">Familia · Honor · Código</span><span lang="en">Family · Honor · Code</span></p>
+      </div>
     </div>
   </div>
 </header>
@@ -361,28 +354,29 @@ footer .caps{color:var(--gold)}
   <div class="wrap">
     <div class="chapter rv">
       <span class="num">I</span>
-      <h2><span lang="es">Mi código</span><span lang="en">My Code</span></h2>
-      <p><span lang="es">Tres reglas de mi casa que hoy aplico al software.</span><span lang="en">Three rules from my family that I now apply to software.</span></p>
+      <h2><span lang="es">Cómo trabajo</span><span lang="en">How I Work</span></h2>
+      <p><span lang="es">Tres pasos, siempre en este orden.</span><span lang="en">Three steps, always in this order.</span></p>
     </div>
     <div class="code3">
       <div class="rule3 rv">
-        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="14" cy="14" r="8"/><path d="M20 20l14 14M28 28l4-4M31 31l3-3"/></svg>
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="13" cy="15" r="5"/><circle cx="27" cy="15" r="5"/><path d="M4 33c1-6 5-9 9-9s8 3 9 9M18 33c1-6 5-9 9-9s8 3 9 9"/></svg>
         <span class="rn">I</span>
-        <h3><span lang="es">Resuelvo</span><span lang="en">I solve</span></h3>
-        <p><span lang="es">Diseño la base de datos y la lógica antes de escribir código: modelo relacional, roles y permisos, validaciones y seguridad, en PHP y MySQL.</span><span lang="en">I design the database and the logic before writing code: relational model, roles and permissions, validation and security, in PHP and MySQL.</span></p>
+        <h3><span lang="es">Entiendo</span><span lang="en">Understand</span></h3>
+        <p><span lang="es">Hablo con el cliente, identifico lo que de verdad necesita y lo convierto en requisitos y flujos de usuario claros. Así el equipo no rehace trabajo.</span><span lang="en">I talk with the client, identify what they really need and turn it into clear requirements and user flows. That way the team avoids rework.</span></p>
       </div>
       <div class="rule3 rv">
-        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="13" cy="15" r="5"/><circle cx="27" cy="15" r="5"/><path d="M4 33c1-6 5-9 9-9s8 3 9 9M18 33c1-6 5-9 9-9s8 3 9 9"/></svg>
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><ellipse cx="20" cy="9" rx="12" ry="4"/><path d="M8 9v22c0 2.2 5.4 4 12 4s12-1.8 12-4V9"/><path d="M8 20c0 2.2 5.4 4 12 4s12-1.8 12-4"/></svg>
         <span class="rn">II</span>
-        <h3><span lang="es">Entiendo</span><span lang="en">I understand</span></h3>
-        <p><span lang="es">Hablo con el cliente, identifico lo que de verdad necesita y lo convierto en requisitos y flujos de usuario claros. Así el equipo no rehace trabajo.</span><span lang="en">I talk with the client, identify what they really need and turn it into clear requirements and user flows. That way the team avoids rework.</span></p>
+        <h3><span lang="es">Diseño</span><span lang="en">Design</span></h3>
+        <p><span lang="es">Con los requisitos claros, diseño la base de datos y la lógica antes de escribir código: modelo relacional, roles, permisos y seguridad. Luego construyo en PHP y MySQL, con la IA como herramienta.</span><span lang="en">With clear requirements, I design the database and the logic before writing code: relational model, roles, permissions and security. Then I build in PHP and MySQL, using AI as a tool.</span></p>
       </div>
       <div class="rule3 rv">
         <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M20 4l13 5v9c0 9-6 15-13 18C13 33 7 27 7 18V9z"/><path d="M14 20l4 4 8-9"/></svg>
         <span class="rn">III</span>
-        <h3><span lang="es">Cumplo</span><span lang="en">I deliver</span></h3>
+        <h3><span lang="es">Entrego</span><span lang="en">Deliver</span></h3>
         <p><span lang="es">Entrego lo acordado y completo: desplegado, documentado con manual de usuario y con el cliente capacitado para usarlo.</span><span lang="en">I deliver what was agreed, complete: deployed, documented with a user manual and with the client trained to use it.</span></p>
       </div>
+    </div>
     </div>
   </div>
 </section>
@@ -399,7 +393,6 @@ footer .caps{color:var(--gold)}
 
     <div class="works">
       <article class="work grand rv tilt">
-        <span class="rank" aria-hidden="true">A<i></i></span>
         <svg class="corner c1" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c2" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c3" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c4" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg>
         <div>
           <span class="meta caps"><span lang="es">Práctica · Proyecto formativo SENA</span><span lang="en">Internship · SENA training project</span></span>
@@ -427,7 +420,6 @@ footer .caps{color:var(--gold)}
       </article>
 
       <article class="work grand rv tilt">
-        <span class="rank" aria-hidden="true">K<i></i></span>
         <svg class="corner c1" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c2" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c3" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c4" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg>
         <div>
           <span class="meta caps"><span lang="es">Proyecto personal · Laravel</span><span lang="en">Personal project · Laravel</span></span>
@@ -463,7 +455,7 @@ footer .caps{color:var(--gold)}
       <div class="craft"><h3><span lang="es">Backend y datos</span><span lang="en">Backend & data</span></h3><ul><li>PHP</li><li>MySQL · MariaDB</li><li>SQL <em lang="es">JOINs, consultas preparadas</em><em lang="en">JOINs, prepared statements</em></li><li><span lang="es">Modelado relacional</span><span lang="en">Relational modeling</span></li><li>Laravel <em lang="es">con IA</em><em lang="en">with AI</em></li></ul></div>
       <div class="craft"><h3>Frontend</h3><ul><li>HTML · CSS</li><li>Bootstrap · Tailwind</li><li>JavaScript <em lang="es">básico</em><em lang="en">basic</em></li><li><span lang="es">Flujos de usuario (UX)</span><span lang="en">User flows (UX)</span></li></ul></div>
       <div class="craft"><h3><span lang="es">Desarrollo con IA</span><span lang="en">AI-assisted development</span></h3><ul><li><span lang="es">Arquitectura y especificación</span><span lang="en">Architecture and specification</span></li><li><span lang="es">Generación de código guiada</span><span lang="en">Guided code generation</span></li><li><span lang="es">Revisión y optimización</span><span lang="en">Review and optimization</span></li><li>Python <em lang="es">nociones</em><em lang="en">fundamentals</em></li></ul></div>
-      <div class="craft"><h3><span lang="es">Método</span><span lang="en">Method</span></h3><ul><li><span lang="es">Levantamiento de requisitos</span><span lang="en">Requirements gathering</span></li><li>Scrum · Scrum Master</li><li>Git · GitHub <em lang="es">básico</em><em lang="en">basic</em></li><li><span lang="es">Manual de usuario y capacitación</span><span lang="en">User manuals and training</span></li></ul></div>
+      <div class="craft"><h3><span lang="es">Proceso y equipo</span><span lang="en">Process & team</span></h3><ul><li><span lang="es">Levantamiento de requisitos</span><span lang="en">Requirements gathering</span></li><li>Scrum · Scrum Master</li><li>Git · GitHub <em lang="es">básico</em><em lang="en">basic</em></li><li><span lang="es">Manual de usuario y capacitación</span><span lang="en">User manuals and training</span></li></ul></div>
     </div>
   </div>
 </section>
@@ -480,7 +472,7 @@ footer .caps{color:var(--gold)}
     <ol class="annals">
       <li class="rv"><span class="when"><span lang="es">Oct 2025</span><span lang="en">Oct 2025</span></span><div><h3><span lang="es">Técnico en Programación de Software</span><span lang="en">Software Programming Technician</span></h3><p><span lang="es">SENA, Neiva · Programa 233104: 2.304 horas (1.440 lectivas y 864 de etapa productiva), en articulación con la media técnica.</span><span lang="en">SENA, Neiva · Program 233104: 2,304 hours (1,440 coursework and 864 practical stage), taken alongside technical high school.</span></p></div></li>
       <li class="rv"><span class="when"><span lang="es">Abr – Nov 2025</span><span lang="en">Apr – Nov 2025</span></span><div><h3><span lang="es">Programador de software · práctica</span><span lang="en">Software developer · internship</span></h3><p><span lang="es">I.E. Técnico Superior de Neiva · Etapa productiva del programa SENA. Desarrollo de POE: base de datos, backend, roles y seguridad. Scrum Master del equipo.</span><span lang="en">Técnico Superior school, Neiva · Practical stage of the SENA program. Built POE: database, backend, roles and security. Team Scrum Master.</span></p></div></li>
-      <li class="rv"><span class="when">2025</span><div><h3><span lang="es">Bachiller Técnico</span><span lang="en">Technical High School Diploma</span></h3><p><span lang="es">Lideré proyectos institucionales de seguridad, bienestar y entretenimiento con equipos de hasta 58 estudiantes.</span><span lang="en">Led school projects on safety, wellbeing and recreation with teams of up to 58 students.</span></p></div></li>
+      <li class="rv"><span class="when">2025</span><div><h3><span lang="es">Bachiller Técnico</span><span lang="en">Technical High School Diploma</span></h3><p><span lang="es">I.E. Técnico Superior de Neiva · Media técnica articulada con el SENA.</span><span lang="en">Técnico Superior school, Neiva · Technical high school in partnership with SENA.</span></p></div></li>
       <li class="rv"><span class="when">2022</span><div><h3>TecnoAcademia SENA</h3><p><span lang="es">Ciencia, tecnología e innovación con metodologías experienciales (144 h) y elaboración y construcción de prototipos mecánicos (144 h).</span><span lang="en">Science, technology and innovation through experiential methods (144 h) and mechanical prototype design and construction (144 h).</span></p></div></li>
     </ol>
   </div>
@@ -544,7 +536,7 @@ footer .caps{color:var(--gold)}
 
   /* ---------- idioma ---------- */
   var titles={es:'David Plazas · Portafolio',en:'David Plazas · Portfolio'};
-  var roles={es:['El comodín de tu equipo','Desarrollador backend','Diseño de bases de datos','Desarrollo asistido por IA'],en:["Your team's wild card",'Backend developer','Database design','AI-assisted development']};
+  var roles={es:['Desarrollador backend','Diseño de bases de datos','PHP · MySQL · SQL','Desarrollo asistido por IA'],en:['Backend developer','Database design','PHP · MySQL · SQL','AI-assisted development']};
   var bEs=document.getElementById('lang-es'),bEn=document.getElementById('lang-en');
   function setLang(l,store){
     root.setAttribute('data-lang',l);root.setAttribute('lang',l);document.title=titles[l];
@@ -608,7 +600,6 @@ footer .caps{color:var(--gold)}
 
   /* ---------- carta: gira con el cursor y se voltea con un clic ---------- */
   var crest=document.getElementById('crest');
-  crest.addEventListener('click',function(){crest.classList.toggle('flipped');});
   if(fine&&!reduce)addEventListener('pointermove',function(e){var r=crest.getBoundingClientRect(),x=(e.clientX-(r.left+r.width/2))/innerWidth,y=(e.clientY-(r.top+r.height/2))/innerHeight;crest.style.transform='perspective(800px) rotateY('+(x*22)+'deg) rotateX('+(-y*22)+'deg)';},{passive:true});
 
   /* ---------- obras: brillo e inclinación ---------- */
