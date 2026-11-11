@@ -3,499 +3,454 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>David Plazas · Portafolio</title>
+<title>David Plazas Morales · Desarrollador backend</title>
 <meta name="description" content="David Plazas Morales, Técnico en Programación de Software (SENA). Desarrollo backend con PHP y MySQL, diseño de bases de datos y desarrollo asistido por IA. Neiva, Colombia.">
 <meta name="author" content="David Plazas Morales">
-<meta name="color-scheme" content="light dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<script>
-/* Tema e idioma antes de pintar: preferencia guardada → sistema */
-(function(){var d=document.documentElement,t=null,l=null;
- try{t=localStorage.getItem('dp-theme');l=localStorage.getItem('dp-lang');}catch(e){}
- if(t)d.setAttribute('data-theme',t);
- l=l||((navigator.language||'es').toLowerCase().indexOf('es')===0?'es':'en');
- d.setAttribute('data-lang',l);d.setAttribute('lang',l);})();
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* Casa señorial: pergamino, tinta sepia, oro viejo y vino.
-   Composición: columna clásica centrada, ornamentos en oro, numeración romana por capítulos. */
-:root{
-  --logo:url('logo.webp');
-  --paper:#f4ecdc;
-  --paper-2:#ebe0c9;
-  --card:#fbf6ec;
-  --ink:#2a1c13;
-  --ink-soft:#5e4b3c;
-  --gold:#94701f;
-  --gold-hi:#b8892a;
-  --glint:#e0b85a;
-  --wine:#7a1b20;
-  --rule:rgba(148,112,31,.35);
-  --dust:150,112,40;
-  --shadow:0 30px 60px -36px rgba(64,40,16,.45);
-  --display:"Cormorant Garamond", "Cormorant", Garamond, "Times New Roman", serif;
-  --caps:"Cinzel", "Trajan Pro", Georgia, serif;
-  --body:"EB Garamond", Garamond, Georgia, "Times New Roman", serif;
-  --mx:50%; --my:30%;
-  color-scheme:light;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --paper:#0f0b08; --paper-2:#17110c; --card:#1a130d; --ink:#efe4cf; --ink-soft:#b9a78f;
-    --gold:#d2a84a; --gold-hi:#f0cf7a; --glint:#fff3cf; --wine:#b5373c; --rule:rgba(210,168,74,.28);
-    --dust:226,184,96; --shadow:0 30px 70px -30px rgba(0,0,0,.8); color-scheme:dark;
-  }
-}
+:root{--logo:url('logo.webp');
+  --bg:#f5f2ec;--bg2:#ece7de;--card:#fbf9f5;--ink:#1a1b1f;--ink2:#55524c;--ink3:#8a857c;
+  --line:rgba(26,27,31,.12);--line2:rgba(26,27,31,.07);--gold:#93702a;--gold2:#b8913f;--wine:#7c1f27;
+  --stitch:rgba(147,112,42,.35);--shadow:0 1px 2px rgba(20,16,10,.05),0 18px 40px -24px rgba(20,16,10,.25);
+  --serif:"Cormorant Garamond",Georgia,serif;--sans:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"JetBrains Mono",ui-monospace,Consolas,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1013;--bg2:#15171b;--card:#16181d;--ink:#ebe6dc;--ink2:#aaa49a;--ink3:#77736c;
+  --line:rgba(235,230,220,.12);--line2:rgba(235,230,220,.06);--gold:#c9a35a;--gold2:#e0bd76;--wine:#c4545e;
+  --stitch:rgba(201,163,90,.32);--shadow:0 1px 2px rgba(0,0,0,.3),0 24px 50px -28px rgba(0,0,0,.8)}}
 :root[data-theme="dark"]{
-  --paper:#0f0b08; --paper-2:#17110c; --card:#1a130d; --ink:#efe4cf; --ink-soft:#b9a78f;
-  --gold:#d2a84a; --gold-hi:#f0cf7a; --glint:#fff3cf; --wine:#b5373c; --rule:rgba(210,168,74,.28);
-  --dust:226,184,96; --shadow:0 30px 70px -30px rgba(0,0,0,.8); color-scheme:dark;
-}
+  --bg:#0f1013;--bg2:#15171b;--card:#16181d;--ink:#ebe6dc;--ink2:#aaa49a;--ink3:#77736c;
+  --line:rgba(235,230,220,.12);--line2:rgba(235,230,220,.06);--gold:#c9a35a;--gold2:#e0bd76;--wine:#c4545e;
+  --stitch:rgba(201,163,90,.32);--shadow:0 1px 2px rgba(0,0,0,.3),0 24px 50px -28px rgba(0,0,0,.8)}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;overflow-x:clip;background:var(--paper)}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 1.14rem/1.7 var(--body);overflow-x:clip;transition:background .5s,color .5s}
-html[data-lang="es"] [lang="en"], html[data-lang="en"] [lang="es"]{display:none!important}
-::selection{background:var(--wine);color:#f6ecd8}
-a{color:var(--wine);text-decoration-color:var(--rule);text-underline-offset:4px}
-a:hover{text-decoration-color:currentColor}
-:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:4px}
-h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;margin:0;text-wrap:balance}
-.caps{font-family:var(--caps);letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;font-weight:600}
-.wrap{max-width:70rem;margin:0 auto;padding:0 clamp(18px,4vw,44px);position:relative}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.7 var(--sans);-webkit-font-smoothing:antialiased;
+  background-image:repeating-linear-gradient(90deg,var(--line2) 0 1px,transparent 1px 7px);background-attachment:fixed}
+html[data-lang="es"] [lang="en"],html[data-lang="en"] [lang="es"]{display:none!important}
+a{color:inherit}
+::selection{background:var(--gold);color:var(--bg)}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+.mono{font-family:var(--mono)}
+.logo{background:var(--logo) center/contain no-repeat}
 
-/* fondo: polvo de oro + luz que sigue el cursor + textura */
-#dust{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
-.sheen{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(560px circle at var(--mx) var(--my),rgba(var(--dust),.16),transparent 62%)}
-.paper-tex{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.35;mix-blend-mode:multiply;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .35 0 0 0 0 .2 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-:root[data-theme="dark"] .paper-tex{mix-blend-mode:overlay;opacity:.25}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .paper-tex{mix-blend-mode:overlay;opacity:.25}}
-header,main,footer,.bar{position:relative;z-index:2}
+/* barra */
+.bar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:24px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:600 15px/1 var(--sans);letter-spacing:.02em}
+.brand .logo{width:28px;height:32px}
+.brand small{font:400 12px var(--mono);color:var(--ink3);margin-left:4px}
+.bar nav{margin-left:auto}
+.bar nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+.bar nav a{font:500 12.5px var(--mono);color:var(--ink2);text-decoration:none;transition:color .2s}
+.bar nav a:hover{color:var(--gold)}
+.bar nav a i{font-style:normal;color:var(--gold)}
+.tools{display:flex;gap:8px}
+.tools button{height:32px;min-width:32px;padding:0 10px;border:1px solid var(--line);background:transparent;color:var(--ink2);border-radius:6px;font:500 11.5px var(--mono);cursor:pointer;display:grid;place-items:center}
+.tools button:hover{border-color:var(--gold);color:var(--gold)}
+.tools svg{width:15px;height:15px}
 
-/* cursor */
-.ring,.pin{position:fixed;left:0;top:0;z-index:60;pointer-events:none;border-radius:50%;opacity:0;transition:opacity .4s}
-.ring{width:34px;height:34px;margin:-17px 0 0 -17px;border:1px solid var(--gold);transition:opacity .4s,width .3s,height .3s,margin .3s,background .3s}
-.ring.big{width:64px;height:64px;margin:-32px 0 0 -32px;background:rgba(var(--dust),.12)}
-.pin{width:5px;height:5px;margin:-2.5px 0 0 -2.5px;background:var(--wine)}
-body.moved .ring,body.moved .pin{opacity:1}
-@media (hover:hover) and (pointer:fine){body.fine,body.fine a,body.fine button{cursor:none}}
-
-/* barra superior */
-.bar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 82%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
-.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.6rem;flex-wrap:wrap}
-.crest-link{display:flex;align-items:center;gap:.7rem;color:var(--ink);text-decoration:none}
-.logo{display:block;background:var(--logo) center/contain no-repeat}
-.crest-link .logo{filter:drop-shadow(0 2px 4px rgba(0,0,0,.25))}
-.crest-link span{font-family:var(--caps);font-weight:600;letter-spacing:.16em;font-size:.82rem}
-.bar nav ul{display:flex;gap:clamp(.8rem,2.2vw,1.8rem);list-style:none;margin:0;padding:0;flex-wrap:wrap}
-.bar nav a{color:var(--ink-soft);text-decoration:none;font-family:var(--caps);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;position:relative;padding:.3rem 0}
-.bar nav a::after{content:"";position:absolute;left:50%;right:50%;bottom:0;height:1px;background:var(--gold);transition:left .35s,right .35s}
-.bar nav a:hover{color:var(--ink)} .bar nav a:hover::after{left:0;right:0}
-.controls{display:flex;gap:.5rem;align-items:center}
-.seg{display:inline-flex;border:1px solid var(--rule);border-radius:999px;padding:2px;background:var(--card)}
-.seg button{font:600 .66rem/1 var(--caps);letter-spacing:.16em;border:0;background:transparent;color:var(--ink-soft);padding:.45rem .7rem;border-radius:999px;cursor:pointer;transition:background .3s,color .3s}
-.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
-.theme-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--rule);background:var(--card);color:var(--gold);display:grid;place-items:center;cursor:pointer;transition:transform .5s}
-.theme-btn:hover{transform:rotate(25deg)}
-.theme-btn svg{width:18px;height:18px}
-.theme-btn .moon{display:none}
-:root[data-theme="dark"] .theme-btn .sun{display:none} :root[data-theme="dark"] .theme-btn .moon{display:block}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .theme-btn .sun{display:none} :root:not([data-theme="light"]) .theme-btn .moon{display:block}}
-
-/* portada */
-.hero{padding:clamp(3rem,8vw,6.5rem) 0 clamp(2.5rem,6vw,4rem)}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
-.eyebrow{display:flex;align-items:center;gap:.9rem;color:var(--gold)}
-.eyebrow::before{content:"";width:48px;height:1px;background:var(--gold)}
-.hero h1{font-size:clamp(3.2rem,8.5vw,6.6rem);font-weight:500;letter-spacing:-.01em;margin:1.1rem 0 .3rem}
-.hero h1 em{font-style:italic;font-weight:400;color:var(--wine)}
-.gild{background:linear-gradient(110deg,var(--gold) 0%,var(--gold-hi) 30%,var(--glint) 42%,var(--gold-hi) 54%,var(--gold) 80%);background-size:260% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gild 9s ease-in-out infinite}
-@keyframes gild{0%,100%{background-position:100% 0}50%{background-position:0 0}}
-.role{font-family:var(--display);font-style:italic;font-size:clamp(1.35rem,2.6vw,1.9rem);color:var(--ink-soft);margin:0;min-height:1.6em}
-.role b{font-weight:500;color:var(--ink)}
-.role .caret{display:inline-block;width:1px;height:1em;background:var(--wine);margin-left:3px;vertical-align:-.12em;animation:blink 1.1s steps(1) infinite}
+/* hero */
+.hero{padding:88px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center}
+.kicker{font:500 12.5px var(--mono);color:var(--gold);margin:0 0 22px;letter-spacing:.02em}
+.kicker b{color:var(--ink3);font-weight:400}
+h1{font:600 clamp(3rem,6.2vw,5.1rem)/.98 var(--serif);margin:0;letter-spacing:-.01em}
+h1 em{font-style:italic;font-weight:500;color:var(--ink2)}
+.role{font:500 15px var(--mono);margin:22px 0 0;color:var(--ink)}
+.role .p{color:var(--gold)}
+.caret{display:inline-block;width:8px;height:1.05em;background:var(--gold);vertical-align:-.15em;margin-left:3px;animation:blink 1.1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
-.lead{max-width:34rem;color:var(--ink-soft);margin:1.2rem 0 2rem}
-.cta{display:flex;gap:1rem;flex-wrap:wrap}
-.btn{position:relative;display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 1.5rem;font-family:var(--caps);font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border:1px solid var(--ink);color:var(--ink);overflow:hidden;isolation:isolate;transition:color .4s,transform .25s ease-out}
-.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.7,0,.2,1)}
-.btn:hover{color:var(--paper)} .btn:hover::before{transform:scaleX(1)}
-.btn.solid{background:var(--wine);border-color:var(--wine);color:#f6ecd8}
-.btn.solid::before{background:var(--gold)}
-.btn.solid:hover{color:#1a120b}
+.lead{color:var(--ink2);font-size:17px;max-width:540px;margin:20px 0 32px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 20px;border-radius:6px;border:1px solid var(--line);text-decoration:none;font:500 14px var(--sans);color:var(--ink);background:transparent;cursor:pointer;transition:border-color .2s,color .2s,background .2s}
+.btn:hover{border-color:var(--gold);color:var(--gold)}
+.btn.solid{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.solid:hover{background:var(--gold);border-color:var(--gold);color:var(--bg)}
 
-.crest-stage{position:relative;display:grid;place-items:center;aspect-ratio:1;max-width:440px;width:100%;margin-inline:auto}
-.halo{position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle,rgba(var(--dust),.28),transparent 66%);filter:blur(6px)}
-.orbit{position:absolute;inset:0;border-radius:50%;border:1px solid var(--rule)}
-.orbit.o1{animation:spin 80s linear infinite}
-.orbit.o2{inset:8%;border-style:dashed;animation:spin 120s linear infinite reverse}
-.orbit i{position:absolute;top:-4px;left:calc(50% - 4px);width:8px;height:8px;transform:rotate(45deg);background:var(--gold)}
-.orbit.o2 i{background:var(--wine);top:auto;bottom:-4px}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes sweep{0%,55%{background-position:120% 0}100%{background-position:-120% 0}}
-.motto{position:absolute;bottom:-1.2rem;left:0;right:0;text-align:center;color:var(--gold)}
+/* patrón: diagrama ER */
+.pattern{position:relative;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:44px 18px 18px}
+.pattern::before{content:"";position:absolute;inset:7px;border:1px dashed var(--stitch);border-radius:6px;pointer-events:none}
+.pattern .ruler{position:absolute;left:18px;right:90px;top:16px;height:9px;background:repeating-linear-gradient(90deg,var(--ink3) 0 1px,transparent 1px 10px),repeating-linear-gradient(90deg,var(--ink3) 0 1px,transparent 1px 50px);background-size:auto 5px,auto 9px;background-repeat:repeat-x;background-position:bottom;opacity:.45}
+.pattern .file{position:absolute;right:22px;top:24px;font:400 11px var(--mono);color:var(--ink3);transform:translateY(-100%)}
+.er{display:block;width:100%;height:auto}
+.er text{font-family:var(--mono);fill:var(--ink2)}
+.er .tb rect{fill:var(--bg2);stroke:var(--line)}
+.er .tb .hd{fill:var(--ink);font-weight:500}
+.er .core rect.box{fill:var(--card);stroke:var(--gold)}
+.er .core .hdbg{fill:var(--gold)}
+.er .core .hd{fill:var(--card);font-weight:500}
+.er .pk{fill:var(--gold)}
+.er .fk{fill:var(--wine)}
+.er .rel{fill:none;stroke:var(--gold);stroke-width:1;opacity:.75}
+.er .note{fill:var(--ink3)}
+.er .tb,.er .rel{transition:opacity .25s}
+.er.focus .tb:not(.on),.er.focus .rel:not(.on){opacity:.25}
+.cap{display:flex;justify-content:space-between;gap:12px;margin:12px 4px 0;font:400 11.5px var(--mono);color:var(--ink3)}
+.cap b{color:var(--gold);font-weight:500}
 
-/* carta de baraja */
-.playcard{position:relative;width:60%;aspect-ratio:5/7;transform-style:preserve-3d;transition:transform .25s ease-out;z-index:1}
-.playcard:focus-visible{outline:2px solid var(--gold);outline-offset:8px;border-radius:20px}
-.flipper{position:absolute;inset:0;transform-style:preserve-3d;transition:transform 1s cubic-bezier(.6,0,.2,1)}
-.playcard.flipped .flipper{transform:rotateY(180deg)}
-.face{position:absolute;inset:0;border-radius:18px;-webkit-backface-visibility:hidden;backface-visibility:hidden;border:1px solid var(--gold);box-shadow:0 40px 60px -30px rgba(40,20,6,.6),0 0 0 1px rgba(var(--dust),.15) inset;display:grid;place-items:center;overflow:hidden}
-.face::before{content:"";position:absolute;inset:9px;border:1px solid var(--rule);border-radius:12px;pointer-events:none}
-.front{background:radial-gradient(circle at 50% 42%,var(--card),var(--paper-2))}
-.logo-box{position:relative;width:74%;aspect-ratio:313/360;display:block}
-.logo-box .logo{position:absolute;inset:0;filter:drop-shadow(0 16px 22px rgba(40,24,8,.45))}
-.logo-box .shine{position:absolute;inset:0;-webkit-mask:var(--logo) center/contain no-repeat;mask:var(--logo) center/contain no-repeat;background:linear-gradient(115deg,transparent 35%,rgba(255,248,220,.75) 48%,transparent 60%);background-size:300% 100%;animation:sweep 6s ease-in-out infinite;mix-blend-mode:overlay}
-.idx{position:absolute;display:grid;justify-items:center;font-family:var(--display);font-weight:700;font-size:1.7rem;line-height:.95;color:var(--wine)}
-.idx i,.rank i{display:block;width:.3em;height:.3em;margin-top:.22em;transform:rotate(45deg);background:var(--gold)}
-.tl{top:16px;left:18px} .br{bottom:16px;right:18px;transform:rotate(180deg)}
-.back{transform:rotateY(180deg);background:
-  radial-gradient(circle at 50% 44%,rgba(0,0,0,0) 0 27%,rgba(0,0,0,.18) 60%),
-  repeating-linear-gradient(45deg,#7a1b20 0 9px,#651419 9px 18px),#7a1b20;border-color:#d2a84a}
-.back::before{border-color:rgba(240,207,122,.55)}
-.medal{width:46%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:#f4ecdc;border:3px solid #d2a84a;box-shadow:0 10px 24px rgba(0,0,0,.35);margin-bottom:12%}
-.medal .logo{display:block;width:62%;aspect-ratio:313/360}
-.joker{position:absolute;bottom:17%;left:0;right:0;text-align:center;color:#f0cf7a;font-size:.78rem;letter-spacing:.42em}
+/* secciones */
+section{padding:96px 0}
+.head{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;align-items:baseline;margin-bottom:48px}
+.head .n{font:500 13px var(--mono);color:var(--gold)}
+.head h2{font:600 clamp(2.1rem,3.6vw,2.9rem)/1.05 var(--serif);margin:0}
+.head p{grid-column:2;margin:4px 0 0;color:var(--ink2);max-width:620px}
+.rule{height:1px;background:var(--line);border:0;margin:0}
 
-/* mi código */
-.code3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem}
-.rule3{position:relative;text-align:center;padding:2.2rem 1.6rem 2rem;background:var(--card);border:1px solid var(--rule);box-shadow:var(--shadow);transition:border-color .4s,transform .4s}
-.rule3::before{content:"";position:absolute;inset:7px;border:1px solid var(--rule);pointer-events:none}
-.rule3:hover{border-color:var(--gold);transform:translateY(-4px)}
-.rule3 svg{width:40px;height:40px;color:var(--gold);margin:0 auto .8rem;display:block}
-.rule3 .rn{font-family:var(--caps);font-size:.72rem;letter-spacing:.32em;color:var(--wine)}
-.rule3 h3{font-size:clamp(2rem,3.4vw,2.6rem);margin:.35rem 0 .7rem}
-.rule3 p{margin:0;color:var(--ink-soft)}
+/* método */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+.step{position:relative;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:28px 26px 26px;box-shadow:var(--shadow)}
+.step::before{content:"";position:absolute;inset:6px;border:1px dashed var(--stitch);border-radius:6px;opacity:0;transition:opacity .3s;pointer-events:none}
+.step:hover::before{opacity:1}
+.step .tag{display:flex;justify-content:space-between;font:500 12px var(--mono);color:var(--ink3);margin-bottom:18px}
+.step .tag b{color:var(--gold);font-weight:500}
+.step h3{font:600 1.9rem/1.1 var(--serif);margin:0 0 10px}
+.step p{margin:0;color:var(--ink2);font-size:15.5px}
+.step svg{width:26px;height:26px;color:var(--gold)}
+.steps .arrow{display:none}
 
-/* rango de carta en cada obra */
-.rank{position:absolute;top:18px;right:20px;display:grid;justify-items:center;font-family:var(--display);font-weight:700;font-size:1.9rem;line-height:.9;color:var(--wine)}
-.work.grand .rank{top:auto;bottom:18px;transform:rotate(180deg)}
-
-/* ornamentos */
-.flourish{display:flex;align-items:center;justify-content:center;gap:1rem;color:var(--gold);margin:0 auto;max-width:28rem}
-.flourish::before,.flourish::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
-.flourish::after{background:linear-gradient(90deg,var(--gold),transparent)}
-.flourish svg{width:42px;height:18px;flex:none}
-
-/* capítulos */
-section{padding:clamp(3.5rem,8vw,6rem) 0}
-.chapter{text-align:center;margin-bottom:3rem}
-.chapter .num{font-family:var(--caps);color:var(--wine);letter-spacing:.3em;font-size:.8rem}
-.chapter h2{font-size:clamp(2.4rem,5.4vw,4rem);margin:.5rem 0 .6rem}
-.chapter p{color:var(--ink-soft);max-width:34rem;margin:0 auto 1.2rem;font-style:italic}
-.rv{translate:0 16px;transition:translate .9s cubic-bezier(.2,.7,.2,1)} .rv.in{translate:0 0}
-
-/* obras */
-.works{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.6rem}
-.work{--px:50%;--py:0%;position:relative;background:var(--card);border:1px solid var(--rule);padding:clamp(1.5rem,3vw,2.3rem);box-shadow:var(--shadow);transition:transform .3s ease-out,translate .9s cubic-bezier(.2,.7,.2,1),border-color .4s}
-.work::before{content:"";position:absolute;inset:7px;border:1px solid var(--rule);pointer-events:none}
-.work::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(380px circle at var(--px) var(--py),rgba(var(--dust),.16),transparent 60%);opacity:0;transition:opacity .4s}
-.work:hover{border-color:var(--gold)} .work:hover::after{opacity:1}
-.work .corner{position:absolute;width:22px;height:22px;color:var(--gold)}
-.work .c1{top:-1px;left:-1px} .work .c2{top:-1px;right:-1px;transform:scaleX(-1)} .work .c3{bottom:-1px;left:-1px;transform:scaleY(-1)} .work .c4{bottom:-1px;right:-1px;transform:scale(-1)}
-.work.grand{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:2.4rem}
-.work .meta{color:var(--gold);display:block;padding-right:2.6rem}
-.work h3{font-size:clamp(1.9rem,3.4vw,2.7rem);margin:.4rem 0 .8rem}
-.work h3 small{display:block;font-size:.5em;font-style:italic;font-weight:500;color:var(--ink-soft);margin-top:.3rem}
-.work p{margin:0 0 1rem;color:var(--ink-soft)}
-.work ul.pts{margin:0 0 1.2rem;padding:0;list-style:none;display:grid;gap:.45rem}
-.work ul.pts li{padding-left:1.4rem;position:relative}
-.work ul.pts li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;transform:rotate(45deg);border:1px solid var(--gold)}
-.tags{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin:0 0 1.2rem;padding:0}
-.tags li{font-family:var(--caps);font-size:.62rem;letter-spacing:.14em;padding:.32rem .65rem;border:1px solid var(--rule);color:var(--ink)}
-.tags li.l{border-style:dashed;color:var(--ink-soft)}
-.more{font-family:var(--caps);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--wine);display:inline-flex;gap:.5rem;align-items:center}
-.more:hover{gap:.9rem} .more{transition:gap .3s}
-.ledger{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin-bottom:1.3rem}
-.ledger div{padding:1rem .4rem;text-align:center}
-.ledger div+div{border-left:1px solid var(--rule)}
-.ledger b{display:block;font-family:var(--display);font-size:clamp(2rem,3.6vw,2.8rem);font-weight:600;color:var(--gold);line-height:1;font-variant-numeric:lining-nums tabular-nums}
-.ledger span{font-size:.92rem;color:var(--ink-soft)}
-.seal.mine{margin:0 0 1.2rem}
-.seal{font-size:.9rem;font-style:italic;color:var(--ink-soft);border-left:2px solid var(--wine);padding-left:.9rem;margin:0}
-.copy{font-size:.82rem;color:var(--ink-soft);margin-top:1rem;font-style:italic}
+/* proyectos */
+.proj{position:relative;display:grid;grid-template-columns:1.25fr 1fr;gap:40px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:40px;box-shadow:var(--shadow);margin-bottom:22px}
+.proj::before{content:"";position:absolute;inset:8px;border:1px dashed var(--stitch);border-radius:8px;pointer-events:none}
+.proj .meta{font:500 12px var(--mono);color:var(--gold);margin:0 0 12px}
+.proj h3{font:600 2.6rem/1 var(--serif);margin:0}
+.proj h3 small{display:block;font:italic 500 1.25rem/1.4 var(--serif);color:var(--ink2);margin-top:6px}
+.proj p{color:var(--ink2)}
+.pts{list-style:none;padding:0;margin:18px 0 0}
+.pts li{position:relative;padding-left:22px;margin:7px 0;font-size:15.5px}
+.pts li::before{content:"—";position:absolute;left:0;color:var(--gold)}
+.more{display:inline-block;margin-top:20px;font:500 12.5px var(--mono);color:var(--wine);text-decoration:none;border-bottom:1px solid currentColor}
+.ledger{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:8px;margin-bottom:18px}
+.ledger div{padding:14px 10px;text-align:center}
+.ledger div+div{border-left:1px solid var(--line)}
+.ledger b{display:block;font:500 1.9rem/1 var(--mono);color:var(--gold)}
+.ledger span{font:400 11.5px var(--mono);color:var(--ink3)}
+.label{position:relative;border:1px solid var(--line);border-radius:6px;padding:14px 16px 12px;margin-bottom:18px;background:var(--bg2)}
+.label::before{content:"";position:absolute;inset:3px;border:1px dashed var(--stitch);border-radius:4px;pointer-events:none}
+.label small{display:block;font:500 10.5px var(--mono);color:var(--ink3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+.label ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px 14px;font:500 13px var(--mono)}
+.mine{border-left:2px solid var(--gold);padding:2px 0 2px 16px;margin:0 0 14px;font-size:15px;color:var(--ink)}
+.mine b{font:500 11.5px var(--mono);color:var(--gold);display:block;margin-bottom:4px;letter-spacing:.04em}
+.copy{font:400 11.5px var(--mono);color:var(--ink3);margin:16px 0 0}
 
 /* oficio */
-.crafts{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:0;border:1px solid var(--rule);background:var(--card)}
-.craft{padding:1.6rem 1.4rem}
-.craft+.craft{border-left:1px solid var(--rule)}
-.craft h3{font-family:var(--caps);font-size:.75rem;letter-spacing:.2em;font-weight:600;color:var(--gold);margin-bottom:1rem}
-.craft ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
-.craft li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px dotted var(--rule);padding-bottom:.25rem}
-.craft li em{font-size:.85rem;color:var(--ink-soft)}
-.note{text-align:center;font-style:italic;color:var(--ink-soft);font-size:.95rem;margin-top:1rem}
+.crafts{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:10px;background:var(--card);box-shadow:var(--shadow);overflow:hidden}
+.craft{padding:26px 22px}
+.craft+.craft{border-left:1px solid var(--line)}
+.craft h3{font:500 12px var(--mono);color:var(--gold);margin:0 0 16px;letter-spacing:.04em}
+.craft ul{list-style:none;padding:0;margin:0}
+.craft li{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.craft li:last-child{border-bottom:0}
+.lv{font:400 10.5px var(--mono);color:var(--ink3);white-space:nowrap;border:1px solid var(--line);border-radius:20px;padding:1px 8px}
+.lv.s{color:var(--gold);border-color:var(--stitch)}
+.legend{display:flex;flex-wrap:wrap;gap:18px;margin-top:16px;font:400 12px var(--mono);color:var(--ink3)}
 
 /* trayectoria */
-.annals{list-style:none;margin:0 auto;padding:0;max-width:52rem;position:relative}
-.annals::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(transparent,var(--gold) 10%,var(--gold) 90%,transparent)}
-.annals li{display:grid;grid-template-columns:1fr 1fr;gap:3.2rem;padding:1.1rem 0;position:relative}
-.annals li::after{content:"";position:absolute;left:calc(50% - 6px);top:1.6rem;width:11px;height:11px;transform:rotate(45deg);background:var(--paper);border:1px solid var(--gold);transition:background .3s}
-.annals li:hover::after{background:var(--wine)}
-.annals .when{text-align:right;font-family:var(--caps);font-size:.78rem;letter-spacing:.18em;color:var(--gold);padding-top:.35rem}
-.annals h3{font-size:1.45rem}
-.annals p{margin:.2rem 0 0;color:var(--ink-soft)}
+.tl{list-style:none;padding:0;margin:0;border-left:1px solid var(--line);margin-left:6px}
+.tl li{position:relative;display:grid;grid-template-columns:150px 1fr;gap:24px;padding:0 0 34px 30px}
+.tl li::before{content:"";position:absolute;left:-5px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:1px solid var(--gold)}
+.tl li:first-child::before{background:var(--gold)}
+.tl .when{font:500 12.5px var(--mono);color:var(--gold);padding-top:4px}
+.tl h3{font:600 1.45rem/1.2 var(--serif);margin:0 0 4px}
+.tl p{margin:0;color:var(--ink2);font-size:15.5px}
 
-/* distinciones */
-.honors{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1rem}
-.honor{display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:start;padding:1.1rem 1.2rem;border:1px solid var(--rule);background:var(--card);transition:border-color .3s,transform .3s}
-.honor:hover{border-color:var(--gold);transform:translateY(-3px)}
-.honor svg{width:30px;height:30px;color:var(--gold);margin-top:.2rem}
-.honor b{font-family:var(--display);font-size:1.22rem;font-weight:600;line-height:1.2;display:block}
-.honor div>span{display:block;margin-top:.25rem;font-size:.92rem;color:var(--ink-soft)}
-.honor b span{font-size:inherit;color:inherit}
-.honor div>span a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--rule)} .honor div>span a:hover{border-color:var(--gold)}
+/* cursos */
+.courses{border-top:1px solid var(--line)}
+.course{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:24px;align-items:baseline;padding:16px 4px;border-bottom:1px solid var(--line)}
+.course h3{font:500 16px var(--sans);margin:0}
+.course>span{font:400 12.5px var(--mono);color:var(--ink3);white-space:nowrap}
+.course a{font:500 12px var(--mono);color:var(--gold);text-decoration:none;border-bottom:1px solid var(--stitch);white-space:nowrap}
+.course a:hover{border-color:var(--gold)}
+.course .na{font:400 12px var(--mono);color:var(--ink3);opacity:.6}
 
-/* correspondencia */
-.letter{max-width:46rem;margin:0 auto;text-align:center;padding:clamp(2rem,5vw,3.5rem);border:1px solid var(--rule);background:var(--card);position:relative;box-shadow:var(--shadow)}
-.letter::before{content:"";position:absolute;inset:8px;border:1px solid var(--rule);pointer-events:none}
+/* contacto */
+.letter{position:relative;max-width:760px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:56px 56px 44px;box-shadow:var(--shadow);text-align:center}
+.letter::before{content:"";position:absolute;inset:8px;border:1px dashed var(--stitch);border-radius:8px;pointer-events:none}
+.letter .n{font:500 13px var(--mono);color:var(--gold)}
+.letter h2{font:600 clamp(2.4rem,4vw,3.2rem)/1.05 var(--serif);margin:8px 0 14px}
+.letter p{color:var(--ink2);margin:0 auto 28px;max-width:520px}
+.letter .btns{justify-content:center}
+.phone{margin:22px 0 0!important;font:400 13px var(--mono)}
+.phone a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+.sign{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
+.sign .logo{width:30px;height:34px;opacity:.9}
+.sign span{font:italic 500 1.35rem var(--serif);color:var(--ink2)}
+footer{padding:36px 0 44px;font:400 12px var(--mono);color:var(--ink3);text-align:center}
+footer p{margin:4px 0}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);background:var(--ink);color:var(--bg);font:500 13px var(--mono);padding:10px 16px;border-radius:6px;opacity:0;transition:.3s;pointer-events:none;z-index:60}
+.toast.show{opacity:1;transform:translate(-50%,0)}
 
-.letter h2{font-size:clamp(2.2rem,5vw,3.4rem);font-style:italic;font-weight:500}
-.letter p{color:var(--ink-soft);max-width:32rem;margin:.8rem auto 1.6rem}
-.channels{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center}
-.phone{margin:1.1rem 0 0!important;font-family:var(--caps);font-size:.75rem;letter-spacing:.16em}
-.phone a{color:var(--ink);text-decoration:none}
-.toast{font-family:var(--caps);font-size:.65rem;letter-spacing:.2em;color:var(--gold);min-height:1.2em;margin-top:.8rem}
+/* aparición */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+.er .rel{stroke-dasharray:var(--len,400);stroke-dashoffset:var(--len,400)}
+.er.drawn .rel{animation:draw 1.2s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.er .rel{stroke-dashoffset:0}}
+.no-js .rv{opacity:1;transform:none}
 
-footer{padding:2.5rem 0 3.5rem;text-align:center;color:var(--ink-soft);font-size:.92rem}
-footer .caps{color:var(--gold)}
-
-@media (max-width:1080px){.works{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:880px){
-  .hero-grid,.work.grand{grid-template-columns:1fr}
-  .works{grid-template-columns:1fr}
-  .crest-stage{max-width:320px;order:-1}
-  .code3{grid-template-columns:1fr}
-  .craft+.craft{border-left:0;border-top:1px solid var(--rule)}
+@media (max-width:960px){
+  .hero .wrap{grid-template-columns:1fr;gap:44px}
+  .proj{grid-template-columns:1fr;gap:24px;padding:30px}
+  .crafts{grid-template-columns:1fr 1fr}
+  .craft:nth-child(3){border-left:0}
+  .craft:nth-child(n+3){border-top:1px solid var(--line)}
+  .steps{grid-template-columns:1fr}
 }
-@media (max-width:600px){
-  .bar nav{order:3;width:100%}
-  .bar nav ul{justify-content:space-between;gap:.6rem}
-  .bar nav ul{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:1.1rem} .bar nav ul::-webkit-scrollbar{display:none} .bar nav a{white-space:nowrap;font-size:.64rem;letter-spacing:.14em}
-  .annals::before{left:6px}
-  .annals li{grid-template-columns:1fr;gap:.2rem;padding-left:2rem}
-  .annals li::after{left:1px}
-  .annals .when{text-align:left}
-  .ledger b{font-size:1.8rem}
-}
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation:none!important;transition:none!important}
-  html{scroll-behavior:auto} .rv{translate:none}
+@media (max-width:720px){
+  .bar nav{display:none}
+  .tools{margin-left:auto}
+  section{padding:72px 0}
+  .hero{padding:56px 0 48px}
+  .head{grid-template-columns:1fr}
+  .head p{grid-column:1}
+  .crafts{grid-template-columns:1fr}
+  .craft+.craft{border-left:0;border-top:1px solid var(--line)}
+  .tl li{grid-template-columns:1fr;gap:4px}
+  .course{grid-template-columns:minmax(0,1fr) auto;gap:4px 16px}
+  .course>span:not(.na){grid-column:1;white-space:normal}
+  .course a,.course .na{grid-column:2;grid-row:1/3;align-self:center}
+  .letter{padding:40px 24px 32px}
+  .wrap{padding:0 20px}
 }
 </style>
 </head>
-<body>
-<canvas id="dust" aria-hidden="true"></canvas>
-<div class="sheen" aria-hidden="true"></div>
-<div class="paper-tex" aria-hidden="true"></div>
-<div class="ring" aria-hidden="true"></div>
-<div class="pin" aria-hidden="true"></div>
+<body class="no-js">
 
-<div class="bar">
+<header class="bar">
   <div class="wrap">
-    <a class="crest-link" href="#inicio"><i class="logo" style="width:38px;aspect-ratio:313/360" aria-hidden="true"></i><span>D · PLAZAS</span></a>
+    <a class="brand" href="#top"><span class="logo" role="img" aria-label="Escudo de David Plazas"></span>David Plazas<small>/ backend</small></a>
     <nav aria-label="Secciones">
       <ul>
-        <li><a href="#codigo"><span lang="es">Método</span><span lang="en">Method</span></a></li>
-        <li><a href="#obras"><span lang="es">Obras</span><span lang="en">Work</span></a></li>
-        <li><a href="#oficio"><span lang="es">Oficio</span><span lang="en">Craft</span></a></li>
-        <li><a href="#trayectoria"><span lang="es">Trayectoria</span><span lang="en">Journey</span></a></li>
-        <li><a href="#distinciones"><span lang="es">Cursos</span><span lang="en">Courses</span></a></li>
-        <li><a href="#contacto"><span lang="es">Contacto</span><span lang="en">Contact</span></a></li>
+        <li><a href="#metodo"><i>01</i> <span lang="es">método</span><span lang="en">method</span></a></li>
+        <li><a href="#proyectos"><i>02</i> <span lang="es">proyectos</span><span lang="en">projects</span></a></li>
+        <li><a href="#oficio"><i>03</i> <span lang="es">oficio</span><span lang="en">skills</span></a></li>
+        <li><a href="#trayectoria"><i>04</i> <span lang="es">trayectoria</span><span lang="en">path</span></a></li>
+        <li><a href="#cursos"><i>05</i> <span lang="es">cursos</span><span lang="en">courses</span></a></li>
+        <li><a href="#contacto"><i>06</i> <span lang="es">contacto</span><span lang="en">contact</span></a></li>
       </ul>
     </nav>
-    <div class="controls">
-      <div class="seg" role="group" aria-label="Idioma / Language">
-        <button type="button" id="lang-es" aria-pressed="true">ES</button>
-        <button type="button" id="lang-en" aria-pressed="false">EN</button>
-      </div>
-      <button type="button" class="theme-btn" id="themeBtn" aria-label="Cambiar tema claro u oscuro">
-        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
-        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
-      </button>
-    </div>
-  </div>
-</div>
-
-<header class="hero" id="inicio">
-  <div class="wrap hero-grid">
-    <div>
-      <p class="eyebrow caps"><span lang="es">Backend · Bases de datos · Desarrollo con IA</span><span lang="en">Backend · Databases · AI-assisted development</span></p>
-      <h1><span class="gild">David Plazas</span><br><em>Morales</em></h1>
-      <p class="role"><b id="typed">Desarrollador backend</b><span class="caret"></span></p>
-      <p class="lead">
-        <span lang="es">Técnico en Programación de Software del SENA. Diseño bases de datos y la lógica del backend en PHP y MySQL: modelo relacional, roles, permisos y seguridad. Uso la IA como herramienta de desarrollo: defino la arquitectura, doy las instrucciones y reviso que el código sea correcto y eficiente. Neiva, Colombia.</span>
-        <span lang="en">Software Programming Technician (SENA). I design databases and backend logic in PHP and MySQL: relational models, roles, permissions and security. I use AI as a development tool: I define the architecture, give the instructions and review that the code is correct and efficient. Neiva, Colombia.</span>
-      </p>
-      <div class="cta">
-        <a class="btn solid mag" href="#obras"><span lang="es">Ver mis obras</span><span lang="en">View my work</span></a>
-        <a class="btn mag" href="https://github.com/DAPLAMO">GitHub</a>
-      </div>
-    </div>
-    <div class="crest-stage" id="stage">
-      <div class="halo"></div>
-      <div class="orbit o1"><i></i></div>
-      <div class="playcard" id="crest">
-        <span class="flipper">
-          <span class="face front">
-            <span class="logo-box"><span class="logo" role="img" aria-label="Escudo de David Plazas"></span><span class="shine"></span></span>
-          </span>
-        </span>
-      </div>
+    <div class="tools">
+      <button id="langBtn" type="button" aria-label="Cambiar idioma / Change language"><span lang="es">EN</span><span lang="en">ES</span></button>
+      <button id="themeBtn" type="button" aria-label="Cambiar tema / Toggle theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></button>
     </div>
   </div>
 </header>
 
-<div class="flourish" aria-hidden="true"><svg viewBox="0 0 42 18" fill="none" stroke="currentColor" stroke-width="1"><path d="M1 9h12M29 9h12"/><path d="M21 2l5 7-5 7-5-7z"/><circle cx="21" cy="9" r="1.5" fill="currentColor"/></svg></div>
-
-<main>
-<section id="codigo">
+<main id="top">
+<section class="hero">
   <div class="wrap">
-    <div class="chapter rv">
-      <span class="num">I</span>
-      <h2><span lang="es">Cómo trabajo</span><span lang="en">How I Work</span></h2>
-      <p><span lang="es">Tres pasos, siempre en este orden.</span><span lang="en">Three steps, always in this order.</span></p>
+    <div>
+      <p class="kicker">// <span lang="es">backend · bases de datos · desarrollo con IA</span><span lang="en">backend · databases · AI-assisted development</span> <b>· Neiva, CO</b></p>
+      <h1>David Plazas<br><em>Morales</em></h1>
+      <p class="role"><span class="p">&gt;</span> <span id="typed"><span lang="es">Desarrollador backend</span><span lang="en">Backend developer</span></span><span class="caret"></span></p>
+      <p class="lead">
+        <span lang="es">Técnico en Programación de Software del SENA. Diseño bases de datos y la lógica del backend en PHP y MySQL: modelo relacional, roles, permisos y seguridad. Uso la IA como herramienta de desarrollo: defino la arquitectura, doy las instrucciones y reviso que el código sea correcto y eficiente.</span>
+        <span lang="en">Software Programming Technician (SENA). I design databases and backend logic in PHP and MySQL: relational models, roles, permissions and security. I use AI as a development tool: I define the architecture, give the instructions and review that the code is correct and efficient.</span>
+      </p>
+      <div class="btns">
+        <a class="btn solid" href="#proyectos"><span lang="es">Ver proyectos</span><span lang="en">See projects</span></a>
+        <a class="btn" href="#contacto"><span lang="es">Contacto</span><span lang="en">Contact</span></a>
+      </div>
     </div>
-    <div class="code3">
-      <div class="rule3 rv">
-        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="13" cy="15" r="5"/><circle cx="27" cy="15" r="5"/><path d="M4 33c1-6 5-9 9-9s8 3 9 9M18 33c1-6 5-9 9-9s8 3 9 9"/></svg>
-        <span class="rn">I</span>
+
+    <figure class="pattern rv" style="margin:0">
+      <div class="ruler" aria-hidden="true"></div>
+      <span class="file">poe.sql</span>
+      <svg class="er" id="er" viewBox="0 0 560 470" role="img" aria-label="Diagrama entidad-relación de POE: dato_estudiante enlazada a ocho tablas por llaves foráneas, y la tabla usuarios con roles por grado">
+        <!-- relaciones -->
+        <g id="rels"></g>
+        <!-- tabla central -->
+        <g class="tb core on" data-t="core">
+          <rect class="box" x="200" y="120" width="160" height="164" rx="5"/>
+          <rect class="hdbg" x="200" y="120" width="160" height="26" rx="5"/><rect class="hdbg" x="200" y="136" width="160" height="10"/>
+          <text class="hd" x="212" y="137" font-size="11">dato_estudiante</text>
+          <text x="212" y="166" font-size="10"><tspan class="pk">PK</tspan>  id_dato</text>
+          <text x="212" y="186" font-size="10">    nom_dato</text>
+          <text x="212" y="206" font-size="10">    doc_dato</text>
+          <text x="212" y="226" font-size="10">    sede · jornada</text>
+          <text x="212" y="250" font-size="10"><tspan class="fk">FK</tspan>  ×8 → ficha</text>
+          <text x="212" y="270" font-size="10" class="note">… 20 columnas</text>
+        </g>
+        <!-- satélites -->
+        <g id="sats"></g>
+        <!-- usuarios -->
+        <g class="tb" data-t="usr">
+          <rect x="200" y="350" width="160" height="94" rx="5"/>
+          <text class="hd" x="212" y="370" font-size="11">usuarios</text>
+          <text x="212" y="394" font-size="10"><tspan class="pk">PK</tspan>  id_usuario</text>
+          <text x="212" y="413" font-size="10">    tipo_usuario</text>
+          <text x="212" y="432" font-size="10">    grado_autorizado</text>
+        </g>
+        <path class="rel" d="M280 350 V 300" stroke-dasharray="3 4" style="stroke-dashoffset:0;animation:none"/>
+        <text x="272" y="330" font-size="9.5" class="note" text-anchor="end">roles por grado</text>
+        <text x="8" y="462" font-size="9.5" class="note">+ egresados · foro · escuelap · tformativos · info_index</text>
+      </svg>
+      <figcaption class="cap"><span><span lang="es">Esquema real de POE · diseñado por mí</span><span lang="en">POE's real schema · designed by me</span></span><span><b>15</b> <span lang="es">tablas</span><span lang="en">tables</span> · <b>8</b> FK</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="metodo">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="n">01 /</span>
+      <h2><span lang="es">Cómo trabajo</span><span lang="en">How I work</span></h2>
+      <p><span lang="es">Como un traje a la medida: primero se toman las medidas, luego se traza el patrón y al final se entrega algo que le queda exacto al cliente.</span><span lang="en">Like a tailored suit: first you take the measurements, then you draw the pattern, and finally you deliver something that fits the client exactly.</span></p>
+    </div>
+    <div class="steps">
+      <article class="step rv">
+        <div class="tag"><b>01</b><span lang="es">medir</span><span lang="en">measure</span></div>
         <h3><span lang="es">Entiendo</span><span lang="en">Understand</span></h3>
         <p><span lang="es">Hablo con el cliente, identifico lo que de verdad necesita y lo convierto en requisitos y flujos de usuario claros. Así el equipo no rehace trabajo.</span><span lang="en">I talk with the client, identify what they really need and turn it into clear requirements and user flows. That way the team avoids rework.</span></p>
-      </div>
-      <div class="rule3 rv">
-        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><ellipse cx="20" cy="9" rx="12" ry="4"/><path d="M8 9v22c0 2.2 5.4 4 12 4s12-1.8 12-4V9"/><path d="M8 20c0 2.2 5.4 4 12 4s12-1.8 12-4"/></svg>
-        <span class="rn">II</span>
+      </article>
+      <article class="step rv">
+        <div class="tag"><b>02</b><span lang="es">trazar</span><span lang="en">pattern</span></div>
         <h3><span lang="es">Diseño</span><span lang="en">Design</span></h3>
         <p><span lang="es">Con los requisitos claros, diseño la base de datos y la lógica antes de escribir código: modelo relacional, roles, permisos y seguridad. Luego construyo en PHP y MySQL, con la IA como herramienta.</span><span lang="en">With clear requirements, I design the database and the logic before writing code: relational model, roles, permissions and security. Then I build in PHP and MySQL, using AI as a tool.</span></p>
-      </div>
-      <div class="rule3 rv">
-        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M20 4l13 5v9c0 9-6 15-13 18C13 33 7 27 7 18V9z"/><path d="M14 20l4 4 8-9"/></svg>
-        <span class="rn">III</span>
+      </article>
+      <article class="step rv">
+        <div class="tag"><b>03</b><span lang="es">entregar</span><span lang="en">deliver</span></div>
         <h3><span lang="es">Entrego</span><span lang="en">Deliver</span></h3>
         <p><span lang="es">Entrego lo acordado y completo: desplegado, documentado con manual de usuario y con el cliente capacitado para usarlo.</span><span lang="en">I deliver what was agreed, complete: deployed, documented with a user manual and with the client trained to use it.</span></p>
-      </div>
-    </div>
+      </article>
     </div>
   </div>
 </section>
 
-<div class="flourish" aria-hidden="true"><svg viewBox="0 0 42 18" fill="none" stroke="currentColor" stroke-width="1"><path d="M1 9h12M29 9h12"/><path d="M21 2l5 7-5 7-5-7z"/><circle cx="21" cy="9" r="1.5" fill="currentColor"/></svg></div>
+<hr class="rule">
 
-<section id="obras">
+<section id="proyectos">
   <div class="wrap">
-    <div class="chapter rv">
-      <span class="num">II</span>
-      <h2><span lang="es">Obras</span><span lang="en">Selected Work</span></h2>
+    <div class="head rv">
+      <span class="n">02 /</span>
+      <h2><span lang="es">Proyectos</span><span lang="en">Projects</span></h2>
       <p><span lang="es">Proyectos reales, con mi aporte concreto en cada uno.</span><span lang="en">Real projects, with my specific contribution in each one.</span></p>
     </div>
 
-    <div class="works">
-      <article class="work grand rv tilt">
-        <svg class="corner c1" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c2" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c3" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c4" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg>
-        <div>
-          <span class="meta caps"><span lang="es">Práctica · Proyecto formativo SENA</span><span lang="en">Internship · SENA training project</span></span>
-          <h3>POE<small><span lang="es">Plataforma de Organización Escolar</span><span lang="en">School Organization Platform</span></small></h3>
-          <p><span lang="es">Sistema web desarrollado como práctica del Técnico en Programación de Software (SENA) para la Institución Educativa Técnico Superior de Neiva. Digitaliza la información de estudiantes y egresados, que antes estaba en papel y hojas de cálculo, con acceso por roles para directivos y docentes. Se entregó desplegado en la nube, con manual de usuario y capacitación al cliente.</span><span lang="en">Web system built as the internship of the Software Programming Technician program (SENA) for the Técnico Superior school in Neiva. It digitizes student and alumni records that used to live on paper and spreadsheets, with role-based access for administrators and teachers. It was delivered deployed in the cloud, with a user manual and client training.</span></p>
-          <ul class="pts">
-            <li><span lang="es">Caracterización, ficha individual, observador del alumno y carpeta de documentos</span><span lang="en">Student profiles, individual records, behavior log and document folder</span></li>
-            <li><span lang="es">Egresados con biografía, datos personales y fotografía</span><span lang="en">Alumni module with biography, personal data and photo</span></li>
-            <li><span lang="es">Roles y permisos por grado, con consultas preparadas</span><span lang="en">Role and grade-level permissions with prepared statements</span></li>
-            <li><span lang="es">Sitio público editable: escuela de padres, talleres, foro y líneas de atención</span><span lang="en">Editable public site: parent school, workshops, forum and help lines</span></li>
-          </ul>
-          <a class="more" href="#contacto"><span lang="es">Código a solicitud</span><span lang="en">Code on request</span> →</a>
+    <article class="proj rv">
+      <div>
+        <p class="meta">// <span lang="es">práctica · proyecto formativo SENA · 2025</span><span lang="en">internship · SENA training project · 2025</span></p>
+        <h3>POE<small><span lang="es">Plataforma de Organización Escolar</span><span lang="en">School Organization Platform</span></small></h3>
+        <p><span lang="es">Sistema web desarrollado como práctica del Técnico en Programación de Software (SENA) para la Institución Educativa Técnico Superior de Neiva. Digitaliza la información de estudiantes y egresados, que antes estaba en papel y hojas de cálculo, con acceso por roles para directivos y docentes. Se entregó desplegado en la nube, con manual de usuario y capacitación al cliente.</span><span lang="en">Web system built as the internship of the Software Programming Technician program (SENA) for the Técnico Superior school in Neiva. It digitizes student and alumni records that used to live on paper and spreadsheets, with role-based access for administrators and teachers. It was delivered deployed in the cloud, with a user manual and client training.</span></p>
+        <ul class="pts">
+          <li><span lang="es">Caracterización, ficha individual, observador del alumno y carpeta de documentos</span><span lang="en">Student profiles, individual records, behavior log and document folder</span></li>
+          <li><span lang="es">Egresados con biografía, datos personales y fotografía</span><span lang="en">Alumni module with biography, personal data and photo</span></li>
+          <li><span lang="es">Roles y permisos por grado, con consultas preparadas</span><span lang="en">Role and grade-level permissions with prepared statements</span></li>
+          <li><span lang="es">Sitio público editable: escuela de padres, talleres, foro y líneas de atención</span><span lang="en">Editable public site: parent school, workshops, forum and help lines</span></li>
+        </ul>
+        <a class="more" href="#contacto"><span lang="es">código a solicitud →</span><span lang="en">code on request →</span></a>
+      </div>
+      <div>
+        <div class="ledger">
+          <div><b>15</b><span lang="es">tablas MySQL</span><span lang="en">MySQL tables</span></div>
+          <div><b>4</b><span lang="es">módulos</span><span lang="en">modules</span></div>
+          <div><b>4</b><span lang="es">desarrolladores</span><span lang="en">developers</span></div>
         </div>
-        <div>
-          <div class="ledger">
-            <div><b>15</b><span lang="es">tablas MySQL</span><span lang="en">MySQL tables</span></div>
-            <div><b>4</b><span lang="es">módulos</span><span lang="en">modules</span></div>
-            <div><b>4</b><span lang="es">desarrolladores</span><span lang="en">developers</span></div>
-          </div>
-          <ul class="tags"><li>PHP</li><li>MySQL</li><li>SQL</li><li>Bootstrap 5</li><li>HTML · CSS</li></ul>
-          <p class="seal mine"><span lang="es">Mi parte: diseñé y programé la base de datos; con un compañero desarrollé el backend, cuya lógica diseñé; construí el sistema de roles y permisos, el registro de comportamientos y la seguridad, y diseñé el flujo de usuario de la interfaz.</span><span lang="en">My part: I designed and built the database; with a teammate I developed the backend, whose logic I designed; I built the roles and permissions system, the behavior log and the security layer, and designed the user flow of the interface.</span></p>
-          <p class="seal mine"><span lang="es">Como Scrum Master (rol asignado en el proyecto formativo) organicé al equipo, fui el enlace con el cliente para levantar requisitos y lo capacité en el uso del sistema.</span><span lang="en">As Scrum Master (a role assigned within the training project) I organized the team, was the point of contact with the client to gather requirements and trained them to use the system.</span></p>
-          <p class="copy">© 2025 Institución Educativa Técnico Superior de Neiva. <span lang="es">Todos los derechos reservados.</span><span lang="en">All rights reserved.</span></p>
-        </div>
-      </article>
+        <div class="label"><small>stack</small><ul><li>PHP</li><li>MySQL</li><li>SQL</li><li>Bootstrap 5</li><li>HTML · CSS</li></ul></div>
+        <p class="mine"><b><span lang="es">MI PARTE</span><span lang="en">MY PART</span></b><span lang="es">Diseñé y programé la base de datos; con un compañero desarrollé el backend, cuya lógica diseñé; construí el sistema de roles y permisos, el registro de comportamientos y la seguridad, y diseñé el flujo de usuario de la interfaz.</span><span lang="en">I designed and built the database; with a teammate I developed the backend, whose logic I designed; I built the roles and permissions system, the behavior log and the security layer, and designed the user flow of the interface.</span></p>
+        <p class="mine"><b>SCRUM MASTER</b><span lang="es">Rol asignado en el proyecto formativo: organicé al equipo, fui el enlace con el cliente para levantar requisitos y lo capacité en el uso del sistema.</span><span lang="en">Role assigned within the training project: I organized the team, was the point of contact with the client to gather requirements and trained them to use the system.</span></p>
+        <p class="copy">© 2025 Institución Educativa Técnico Superior de Neiva. <span lang="es">Todos los derechos reservados.</span><span lang="en">All rights reserved.</span></p>
+      </div>
+    </article>
 
-      <article class="work grand rv tilt">
-        <svg class="corner c1" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c2" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c3" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg><svg class="corner c4" viewBox="0 0 22 22" fill="none" stroke="currentColor"><path d="M1 21V1h20M5 17V5h12"/></svg>
-        <div>
-          <span class="meta caps"><span lang="es">Proyecto personal · Laravel</span><span lang="en">Personal project · Laravel</span></span>
-          <h3>PsicoSocial<small><span lang="es">Comunidad de orientación profesional</span><span lang="en">Professional guidance community</span></small></h3>
-          <p><span lang="es">Plataforma donde las personas plantean consultas y solo psicólogos verificados responden. Empezó como red social y evolucionó a su versión 2.0.</span><span lang="en">A platform where people ask questions and only verified psychologists can answer. It began as a social network and grew into version 2.0.</span></p>
-          <ul class="pts">
-            <li><span lang="es">Cuatro roles, verificación profesional y panel de administración</span><span lang="en">Four roles, professional verification and admin panel</span></li>
-            <li><span lang="es">Muro, historias, seguidores, buscador e inicio de sesión con Google</span><span lang="en">Feed, stories, followers, search and Google sign-in</span></li>
-            <li><span lang="es">Reportes, moderación y suspensión de cuentas</span><span lang="en">Reports, moderation and account suspension</span></li>
-          </ul>
-          <a class="more" href="#contacto"><span lang="es">Código a solicitud</span><span lang="en">Code on request</span> →</a>
-        </div>
-        <div>
-          <ul class="tags"><li>Laravel 12</li><li>PHP</li><li>MySQL</li><li>Tailwind</li><li>Alpine.js</li></ul>
-          <p class="seal mine"><span lang="es">Desarrollo individual asistido por IA: definí los requisitos, el modelo de datos, los roles y la lógica; la IA generó el código bajo mis instrucciones y yo lo revisé y ajusté.</span><span lang="en">Solo development, AI-assisted: I defined the requirements, data model, roles and logic; the AI generated the code under my instructions and I reviewed and adjusted it.</span></p>
-          <p class="seal mine"><span lang="es">Estuvo desplegado en producción; hoy está fuera de línea por costos de servidor.</span><span lang="en">It was deployed in production; it is currently offline due to hosting costs.</span></p>
-        </div>
-      </article>
-    </div>
+    <article class="proj rv">
+      <div>
+        <p class="meta">// <span lang="es">proyecto personal · Laravel</span><span lang="en">personal project · Laravel</span></p>
+        <h3>PsicoSocial<small><span lang="es">Comunidad de orientación profesional</span><span lang="en">Professional guidance community</span></small></h3>
+        <p><span lang="es">Plataforma donde las personas plantean consultas y solo psicólogos verificados responden. Empezó como red social y evolucionó a su versión 2.0.</span><span lang="en">A platform where people ask questions and only verified psychologists can answer. It began as a social network and grew into version 2.0.</span></p>
+        <ul class="pts">
+          <li><span lang="es">Cuatro roles, verificación profesional y panel de administración</span><span lang="en">Four roles, professional verification and admin panel</span></li>
+          <li><span lang="es">Muro, historias, seguidores, buscador e inicio de sesión con Google</span><span lang="en">Feed, stories, followers, search and Google sign-in</span></li>
+          <li><span lang="es">Reportes, moderación y suspensión de cuentas</span><span lang="en">Reports, moderation and account suspension</span></li>
+        </ul>
+        <a class="more" href="#contacto"><span lang="es">código a solicitud →</span><span lang="en">code on request →</span></a>
+      </div>
+      <div>
+        <div class="label"><small>stack</small><ul><li>Laravel 12</li><li>PHP</li><li>MySQL</li><li>Tailwind</li><li>Alpine.js</li></ul></div>
+        <p class="mine"><b><span lang="es">CÓMO SE HIZO</span><span lang="en">HOW IT WAS BUILT</span></b><span lang="es">Desarrollo individual asistido por IA: definí los requisitos, el modelo de datos, los roles y la lógica; la IA generó el código bajo mis instrucciones y yo lo revisé y ajusté.</span><span lang="en">Solo development, AI-assisted: I defined the requirements, data model, roles and logic; the AI generated the code under my instructions and I reviewed and adjusted it.</span></p>
+        <p class="mine"><b><span lang="es">ESTADO</span><span lang="en">STATUS</span></b><span lang="es">Estuvo desplegado en producción; hoy está fuera de línea por costos de servidor.</span><span lang="en">It was deployed in production; it is currently offline due to hosting costs.</span></p>
+      </div>
+    </article>
   </div>
 </section>
 
-<div class="flourish" aria-hidden="true"><svg viewBox="0 0 42 18" fill="none" stroke="currentColor" stroke-width="1"><path d="M1 9h12M29 9h12"/><path d="M21 2l5 7-5 7-5-7z"/><circle cx="21" cy="9" r="1.5" fill="currentColor"/></svg></div>
+<hr class="rule">
 
 <section id="oficio">
   <div class="wrap">
-    <div class="chapter rv">
-      <span class="num">III</span>
-      <h2><span lang="es">El oficio</span><span lang="en">The Craft</span></h2>
+    <div class="head rv">
+      <span class="n">03 /</span>
+      <h2><span lang="es">El oficio</span><span lang="en">Skills</span></h2>
       <p><span lang="es">Lo que uso y el nivel real con el que lo uso.</span><span lang="en">What I use and the real level at which I use it.</span></p>
     </div>
     <div class="crafts rv">
-      <div class="craft"><h3><span lang="es">Backend y datos</span><span lang="en">Backend & data</span></h3><ul><li>PHP</li><li>MySQL · MariaDB</li><li>SQL <em lang="es">JOINs, consultas preparadas</em><em lang="en">JOINs, prepared statements</em></li><li><span lang="es">Modelado relacional</span><span lang="en">Relational modeling</span></li><li>Laravel <em lang="es">con IA</em><em lang="en">with AI</em></li></ul></div>
-      <div class="craft"><h3>Frontend</h3><ul><li>HTML · CSS</li><li>Bootstrap · Tailwind</li><li>JavaScript <em lang="es">básico</em><em lang="en">basic</em></li><li><span lang="es">Flujos de usuario (UX)</span><span lang="en">User flows (UX)</span></li></ul></div>
-      <div class="craft"><h3><span lang="es">Desarrollo con IA</span><span lang="en">AI-assisted development</span></h3><ul><li><span lang="es">Arquitectura y especificación</span><span lang="en">Architecture and specification</span></li><li><span lang="es">Generación de código guiada</span><span lang="en">Guided code generation</span></li><li><span lang="es">Revisión y optimización</span><span lang="en">Review and optimization</span></li><li>Python <em lang="es">nociones</em><em lang="en">fundamentals</em></li></ul></div>
-      <div class="craft"><h3><span lang="es">Proceso y equipo</span><span lang="en">Process & team</span></h3><ul><li><span lang="es">Levantamiento de requisitos</span><span lang="en">Requirements gathering</span></li><li>Scrum · Scrum Master</li><li>Git · GitHub <em lang="es">básico</em><em lang="en">basic</em></li><li><span lang="es">Manual de usuario y capacitación</span><span lang="en">User manuals and training</span></li></ul></div>
+      <div class="craft"><h3><span lang="es">backend y datos</span><span lang="en">backend & data</span></h3><ul>
+        <li>PHP <span class="lv s"><span lang="es">sólido</span><span lang="en">solid</span></span></li>
+        <li>MySQL · MariaDB <span class="lv s"><span lang="es">sólido</span><span lang="en">solid</span></span></li>
+        <li><span lang="es">SQL · JOINs</span><span lang="en">SQL · JOINs</span> <span class="lv s"><span lang="es">sólido</span><span lang="en">solid</span></span></li>
+        <li><span lang="es">Modelado relacional</span><span lang="en">Relational modeling</span> <span class="lv s"><span lang="es">sólido</span><span lang="en">solid</span></span></li>
+        <li>Laravel <span class="lv"><span lang="es">con IA</span><span lang="en">with AI</span></span></li>
+      </ul></div>
+      <div class="craft"><h3>frontend</h3><ul>
+        <li>HTML · CSS <span class="lv s"><span lang="es">sólido</span><span lang="en">solid</span></span></li>
+        <li>Bootstrap · Tailwind <span class="lv"><span lang="es">con IA</span><span lang="en">with AI</span></span></li>
+        <li>JavaScript <span class="lv"><span lang="es">básico</span><span lang="en">basic</span></span></li>
+        <li><span lang="es">Flujos de usuario</span><span lang="en">User flows</span> <span class="lv s"><span lang="es">sólido</span><span lang="en">solid</span></span></li>
+      </ul></div>
+      <div class="craft"><h3><span lang="es">desarrollo con IA</span><span lang="en">AI-assisted dev</span></h3><ul>
+        <li><span lang="es">Arquitectura y especificación</span><span lang="en">Architecture & specs</span></li>
+        <li><span lang="es">Generación de código guiada</span><span lang="en">Guided code generation</span></li>
+        <li><span lang="es">Revisión y optimización</span><span lang="en">Review & optimization</span></li>
+        <li>Python <span class="lv"><span lang="es">nociones</span><span lang="en">fundamentals</span></span></li>
+      </ul></div>
+      <div class="craft"><h3><span lang="es">proceso y equipo</span><span lang="en">process & team</span></h3><ul>
+        <li><span lang="es">Levantamiento de requisitos</span><span lang="en">Requirements gathering</span></li>
+        <li>Scrum · Scrum Master</li>
+        <li>Git · GitHub <span class="lv"><span lang="es">básico</span><span lang="en">basic</span></span></li>
+        <li><span lang="es">Manuales y capacitación</span><span lang="en">Manuals & training</span></li>
+      </ul></div>
     </div>
   </div>
 </section>
 
-<div class="flourish" aria-hidden="true"><svg viewBox="0 0 42 18" fill="none" stroke="currentColor" stroke-width="1"><path d="M1 9h12M29 9h12"/><path d="M21 2l5 7-5 7-5-7z"/><circle cx="21" cy="9" r="1.5" fill="currentColor"/></svg></div>
+<hr class="rule">
 
 <section id="trayectoria">
   <div class="wrap">
-    <div class="chapter rv">
-      <span class="num">IV</span>
-      <h2><span lang="es">Trayectoria</span><span lang="en">Journey</span></h2>
-      <p><span lang="es">Formación técnica desde el colegio y experiencia con proyectos reales.</span><span lang="en">Technical training since high school and hands-on experience with real projects.</span></p>
+    <div class="head rv">
+      <span class="n">04 /</span>
+      <h2><span lang="es">Trayectoria</span><span lang="en">Path</span></h2>
     </div>
-    <ol class="annals">
-      <li class="rv"><span class="when"><span lang="es">Oct 2025</span><span lang="en">Oct 2025</span></span><div><h3><span lang="es">Técnico en Programación de Software</span><span lang="en">Software Programming Technician</span></h3><p><span lang="es">SENA, Neiva · Programa 233104: 2.304 horas (1.440 lectivas y 864 de etapa productiva), en articulación con la media técnica.</span><span lang="en">SENA, Neiva · Program 233104: 2,304 hours (1,440 coursework and 864 practical stage), taken alongside technical high school.</span></p></div></li>
-      <li class="rv"><span class="when"><span lang="es">Abr – Nov 2025</span><span lang="en">Apr – Nov 2025</span></span><div><h3><span lang="es">Programador de software · práctica</span><span lang="en">Software developer · internship</span></h3><p><span lang="es">I.E. Técnico Superior de Neiva · Etapa productiva del programa SENA. Desarrollo de POE: base de datos, backend, roles y seguridad. Scrum Master del equipo.</span><span lang="en">Técnico Superior school, Neiva · Practical stage of the SENA program. Built POE: database, backend, roles and security. Team Scrum Master.</span></p></div></li>
+    <ol class="tl">
+      <li class="rv"><span class="when"><span lang="es">oct 2025</span><span lang="en">Oct 2025</span></span><div><h3><span lang="es">Técnico en Programación de Software</span><span lang="en">Software Programming Technician</span></h3><p><span lang="es">SENA, Neiva · Programa 233104: 2.304 horas (1.440 lectivas y 864 de etapa productiva), en articulación con la media técnica.</span><span lang="en">SENA, Neiva · Program 233104: 2,304 hours (1,440 coursework and 864 practical stage), taken alongside technical high school.</span></p></div></li>
+      <li class="rv"><span class="when"><span lang="es">abr – nov 2025</span><span lang="en">Apr – Nov 2025</span></span><div><h3><span lang="es">Programador de software · práctica</span><span lang="en">Software developer · internship</span></h3><p><span lang="es">I.E. Técnico Superior de Neiva · Etapa productiva del programa SENA. Desarrollo de POE: base de datos, backend, roles y seguridad. Scrum Master del equipo.</span><span lang="en">Técnico Superior school, Neiva · Practical stage of the SENA program. Built POE: database, backend, roles and security. Team Scrum Master.</span></p></div></li>
       <li class="rv"><span class="when">2025</span><div><h3><span lang="es">Bachiller Técnico</span><span lang="en">Technical High School Diploma</span></h3><p><span lang="es">I.E. Técnico Superior de Neiva · Media técnica articulada con el SENA.</span><span lang="en">Técnico Superior school, Neiva · Technical high school in partnership with SENA.</span></p></div></li>
       <li class="rv"><span class="when">2022</span><div><h3>TecnoAcademia SENA</h3><p><span lang="es">Ciencia, tecnología e innovación con metodologías experienciales (144 h) y elaboración y construcción de prototipos mecánicos (144 h).</span><span lang="en">Science, technology and innovation through experiential methods (144 h) and mechanical prototype design and construction (144 h).</span></p></div></li>
     </ol>
   </div>
 </section>
 
-<div class="flourish" aria-hidden="true"><svg viewBox="0 0 42 18" fill="none" stroke="currentColor" stroke-width="1"><path d="M1 9h12M29 9h12"/><path d="M21 2l5 7-5 7-5-7z"/><circle cx="21" cy="9" r="1.5" fill="currentColor"/></svg></div>
+<hr class="rule">
 
-<section id="distinciones">
+<section id="cursos">
   <div class="wrap">
-    <div class="chapter rv">
-      <span class="num">V</span>
-      <h2><span lang="es">Formación complementaria</span><span lang="en">Additional Training</span></h2>
+    <div class="head rv">
+      <span class="n">05 /</span>
+      <h2><span lang="es">Formación complementaria</span><span lang="en">Additional training</span></h2>
       <p><span lang="es">Cursos certificados. Los de Coursera se pueden verificar en línea.</span><span lang="en">Certified courses. Coursera certificates can be verified online.</span></p>
     </div>
-    <div class="honors">
-      <div class="honor rv"><svg viewBox="0 0 30 30" fill="none" stroke="currentColor"><circle cx="15" cy="12" r="8"/><path d="M10 18l-3 10 8-4 8 4-3-10"/></svg><div><b><span lang="es">Introducción a la programación en Python I</span><span lang="en">Introduction to Programming in Python I</span></b><span>Pontificia Universidad Católica de Chile · Coursera · <span lang="es">oct</span><span lang="en">Oct</span> 2024 · <a href="https://coursera.org/verify/RDWLHROHSEN9" target="_blank" rel="noopener"><span lang="es">verificar</span><span lang="en">verify</span></a></span></div></div>
-      <div class="honor rv"><svg viewBox="0 0 30 30" fill="none" stroke="currentColor"><circle cx="15" cy="12" r="8"/><path d="M10 18l-3 10 8-4 8 4-3-10"/></svg><div><b>Network Security</b><span>Cisco · Coursera · <span lang="es">sep</span><span lang="en">Sep</span> 2024 · <a href="https://coursera.org/verify/ESP7JBTYPRSC" target="_blank" rel="noopener"><span lang="es">verificar</span><span lang="en">verify</span></a></span></div></div>
-      <div class="honor rv"><svg viewBox="0 0 30 30" fill="none" stroke="currentColor"><circle cx="15" cy="12" r="8"/><path d="M10 18l-3 10 8-4 8 4-3-10"/></svg><div><b>Introduction to Data Analytics</b><span>IBM · Coursera · <span lang="es">oct</span><span lang="en">Oct</span> 2024 · <a href="https://coursera.org/verify/HRABAJBMUOGV" target="_blank" rel="noopener"><span lang="es">verificar</span><span lang="en">verify</span></a></span></div></div>
-      <div class="honor rv"><svg viewBox="0 0 30 30" fill="none" stroke="currentColor"><circle cx="15" cy="12" r="8"/><path d="M10 18l-3 10 8-4 8 4-3-10"/></svg><div><b>Excel Basics for Data Analysis</b><span>IBM · Coursera · <span lang="es">dic</span><span lang="en">Dec</span> 2024 · <a href="https://coursera.org/verify/W20JIG098NGJ" target="_blank" rel="noopener"><span lang="es">verificar</span><span lang="en">verify</span></a></span></div></div>
-      <div class="honor rv"><svg viewBox="0 0 30 30" fill="none" stroke="currentColor"><circle cx="15" cy="12" r="8"/><path d="M10 18l-3 10 8-4 8 4-3-10"/></svg><div><b>Developing Interpersonal Skills</b><span>IBM · Coursera · <span lang="es">sep</span><span lang="en">Sep</span> 2024 · <a href="https://coursera.org/verify/XDZJVU9ONXG7" target="_blank" rel="noopener"><span lang="es">verificar</span><span lang="en">verify</span></a></span></div></div>
-      <div class="honor rv"><svg viewBox="0 0 30 30" fill="none" stroke="currentColor"><circle cx="15" cy="12" r="8"/><path d="M10 18l-3 10 8-4 8 4-3-10"/></svg><div><b><span lang="es">Tecnologías de la automatización para la formación en mecatrónica</span><span lang="en">Automation Technologies for Mechatronics Training</span></b><span>FESTO · Instituto Técnico Superior · <span lang="es">sep</span><span lang="en">Sep</span> 2023 · 40 h</span></div></div>
-      <div class="honor rv"><svg viewBox="0 0 30 30" fill="none" stroke="currentColor"><circle cx="15" cy="12" r="8"/><path d="M10 18l-3 10 8-4 8 4-3-10"/></svg><div><b><span lang="es">Elaboración y construcción de prototipos mecánicos</span><span lang="en">Mechanical Prototype Design and Construction</span></b><span>SENA · 2022 · 144 h</span></div></div>
-      <div class="honor rv"><svg viewBox="0 0 30 30" fill="none" stroke="currentColor"><circle cx="15" cy="12" r="8"/><path d="M10 18l-3 10 8-4 8 4-3-10"/></svg><div><b><span lang="es">Ciencia, tecnología e innovación (metodologías experienciales)</span><span lang="en">Science, Technology and Innovation (experiential methods)</span></b><span>SENA TecnoAcademia · 2022 · 144 h</span></div></div>
+    <div class="courses rv">
+      <div class="course"><h3><span lang="es">Introducción a la programación en Python I</span><span lang="en">Introduction to Programming in Python I</span></h3><span>PUC Chile · Coursera · <span lang="es">oct</span><span lang="en">Oct</span> 2024</span><a href="https://coursera.org/verify/RDWLHROHSEN9" target="_blank" rel="noopener"><span lang="es">verificar ↗</span><span lang="en">verify ↗</span></a></div>
+      <div class="course"><h3>Network Security</h3><span>Cisco · Coursera · <span lang="es">sep</span><span lang="en">Sep</span> 2024</span><a href="https://coursera.org/verify/ESP7JBTYPRSC" target="_blank" rel="noopener"><span lang="es">verificar ↗</span><span lang="en">verify ↗</span></a></div>
+      <div class="course"><h3>Introduction to Data Analytics</h3><span>IBM · Coursera · <span lang="es">oct</span><span lang="en">Oct</span> 2024</span><a href="https://coursera.org/verify/HRABAJBMUOGV" target="_blank" rel="noopener"><span lang="es">verificar ↗</span><span lang="en">verify ↗</span></a></div>
+      <div class="course"><h3>Excel Basics for Data Analysis</h3><span>IBM · Coursera · <span lang="es">dic</span><span lang="en">Dec</span> 2024</span><a href="https://coursera.org/verify/W20JIG098NGJ" target="_blank" rel="noopener"><span lang="es">verificar ↗</span><span lang="en">verify ↗</span></a></div>
+      <div class="course"><h3>Developing Interpersonal Skills</h3><span>IBM · Coursera · <span lang="es">sep</span><span lang="en">Sep</span> 2024</span><a href="https://coursera.org/verify/XDZJVU9ONXG7" target="_blank" rel="noopener"><span lang="es">verificar ↗</span><span lang="en">verify ↗</span></a></div>
+      <div class="course"><h3><span lang="es">Tecnologías de la automatización para la formación en mecatrónica</span><span lang="en">Automation Technologies for Mechatronics Training</span></h3><span>FESTO · <span lang="es">sep</span><span lang="en">Sep</span> 2023 · 40 h</span><span class="na">pdf</span></div>
+      <div class="course"><h3><span lang="es">Elaboración y construcción de prototipos mecánicos</span><span lang="en">Mechanical Prototype Design and Construction</span></h3><span>SENA · 2022 · 144 h</span><span class="na">pdf</span></div>
+      <div class="course"><h3><span lang="es">Ciencia, tecnología e innovación (metodologías experienciales)</span><span lang="en">Science, Technology and Innovation (experiential methods)</span></h3><span>SENA TecnoAcademia · 2022 · 144 h</span><span class="na">pdf</span></div>
     </div>
   </div>
 </section>
@@ -503,127 +458,90 @@ footer .caps{color:var(--gold)}
 <section id="contacto">
   <div class="wrap">
     <div class="letter rv">
-      <i class="logo" style="width:74px;aspect-ratio:313/360;margin:0 auto 1rem" aria-hidden="true"></i>
-      <span class="num caps" style="color:var(--wine)">VI</span>
+      <span class="n">06 /</span>
       <h2><span lang="es">Conversemos</span><span lang="en">Let's talk</span></h2>
       <p><span lang="es">Disponible para proyectos freelance de desarrollo web, en remoto y por proyectos.</span><span lang="en">Available for remote, project-based freelance web development.</span></p>
-      <div class="channels">
-        <button type="button" class="btn solid" id="copyMail">davidplazasmorales@gmail.com</button>
-        <a class="btn" href="https://wa.me/573214558862">WhatsApp</a>
-        <a class="btn" href="https://github.com/DAPLAMO">github.com/DAPLAMO</a>
+      <div class="btns">
+        <button class="btn solid" id="copyMail" type="button" data-mail="davidplazasmorales@gmail.com">davidplazasmorales@gmail.com</button>
+        <a class="btn" href="https://wa.me/573214558862" target="_blank" rel="noopener">WhatsApp</a>
         <a class="btn" href="https://www.linkedin.com/in/davidplazasmorales" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/DAPLAMO" target="_blank" rel="noopener">GitHub</a>
       </div>
       <p class="phone"><span lang="es">Celular</span><span lang="en">Phone</span>: <a href="tel:+573214558862">+57 321 455 8862</a></p>
-      <p class="toast" id="toast" aria-live="polite"></p>
+      <div class="sign"><span class="logo" aria-hidden="true"></span><span>David Plazas Morales</span></div>
     </div>
   </div>
 </section>
 </main>
 
 <footer>
-  <div class="flourish" aria-hidden="true" style="margin-bottom:1.2rem"><svg viewBox="0 0 42 18" fill="none" stroke="currentColor" stroke-width="1"><path d="M1 9h12M29 9h12"/><path d="M21 2l5 7-5 7-5-7z"/><circle cx="21" cy="9" r="1.5" fill="currentColor"/></svg></div>
-  <p class="caps">David Plazas Morales · Neiva, Colombia</p>
-  <p>© 2026 David Plazas Morales. <span lang="es">Todos los derechos reservados. El escudo, los textos y el código de este sitio no pueden copiarse ni usarse sin autorización escrita. POE es propiedad de la Institución Educativa Técnico Superior de Neiva.</span><span lang="en">All rights reserved. The crest, text and code of this site may not be copied or used without written permission. POE is owned by the Institución Educativa Técnico Superior, Neiva.</span></p>
+  <div class="wrap">
+    <p>© 2026 David Plazas Morales · <span lang="es">Todos los derechos reservados.</span><span lang="en">All rights reserved.</span></p>
+    <p><span lang="es">POE es propiedad de la Institución Educativa Técnico Superior de Neiva.</span><span lang="en">POE is property of the Técnico Superior school in Neiva.</span></p>
+  </div>
 </footer>
+<div class="toast" id="toast"></div>
 
 <script>
 (function(){
-  var root=document.documentElement;
-  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var fine=matchMedia('(hover:hover) and (pointer:fine)').matches;
-  var save=function(k,v){try{localStorage.setItem(k,v);}catch(e){}};
-  try{var lg=getComputedStyle(root).getPropertyValue('--logo').trim().replace(/^url\(["']?|["']?\)$/g,'');var ic=document.createElement('link');ic.rel='icon';ic.type='image/webp';ic.href=lg;document.head.appendChild(ic);}catch(e){}
+  var root=document.documentElement; document.body.classList.remove('no-js');
+  function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
 
-  /* ---------- idioma ---------- */
-  var titles={es:'David Plazas · Portafolio',en:'David Plazas · Portfolio'};
+  /* favicon desde el escudo */
+  try{var u=getComputedStyle(root).getPropertyValue('--logo').trim().replace(/^url\(['"]?|['"]?\)$/g,'');var l=document.createElement('link');l.rel='icon';l.href=u;document.head.appendChild(l)}catch(e){}
+
+  /* idioma */
+  function setLang(x){root.setAttribute('data-lang',x);root.lang=x;store('dp-lang',x);document.title=x==='es'?'David Plazas Morales · Desarrollador backend':'David Plazas Morales · Backend developer'}
+  var sl=store('dp-lang'); setLang(sl||((navigator.language||'es').toLowerCase().indexOf('es')===0?'es':'en'));
+  document.getElementById('langBtn').addEventListener('click',function(){setLang(root.getAttribute('data-lang')==='es'?'en':'es');typeRestart()});
+
+  /* tema */
+  var st=store('dp-theme'); if(st) root.setAttribute('data-theme',st);
+  document.getElementById('themeBtn').addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')?root.getAttribute('data-theme')==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+    var n=dark?'light':'dark'; root.setAttribute('data-theme',n); store('dp-theme',n)});
+
+  /* rol que se escribe */
   var roles={es:['Desarrollador backend','Diseño de bases de datos','PHP · MySQL · SQL','Desarrollo asistido por IA'],en:['Backend developer','Database design','PHP · MySQL · SQL','AI-assisted development']};
-  var bEs=document.getElementById('lang-es'),bEn=document.getElementById('lang-en');
-  function setLang(l,store){
-    root.setAttribute('data-lang',l);root.setAttribute('lang',l);document.title=titles[l];
-    bEs.setAttribute('aria-pressed',l==='es');bEn.setAttribute('aria-pressed',l==='en');
-    document.getElementById('themeBtn').setAttribute('aria-label',l==='es'?'Cambiar tema claro u oscuro':'Toggle light or dark theme');
-    if(store)save('dp-lang',l); restartTyping();
+  var el=document.getElementById('typed'), ri=0, ci=0, del=false, tm;
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function tick(){var L=roles[root.getAttribute('data-lang')]||roles.es, w=L[ri%L.length];
+    if(!del){ci++; if(ci>w.length){del=true; tm=setTimeout(tick,1800); return}}
+    else{ci--; if(ci<0){del=false; ci=0; ri++; tm=setTimeout(tick,300); return}}
+    el.textContent=w.slice(0,ci); tm=setTimeout(tick,del?28:60)}
+  function typeRestart(){if(reduce)return;clearTimeout(tm);ri=0;ci=0;del=false;tick()}
+  if(!reduce){setTimeout(function(){ci=(roles[root.getAttribute('data-lang')]||roles.es)[0].length;del=false;tm=setTimeout(function(){del=true;tick()},2200)},10)}
+
+  /* diagrama ER */
+  var NS='http://www.w3.org/2000/svg';
+  var L=['adicional_estudiante','atributo_estudiante','caracteristicas_estudiante','entorno_estudiantes'];
+  var R=['fichai_estudiante','folder_estudiante','observador_estudiante','salud_estudiante'];
+  var ys=[56,128,236,308], sats=document.getElementById('sats'), rels=document.getElementById('rels'), er=document.getElementById('er');
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e}
+  function add(name,x,y,side,i){
+    var g=mk('g',{'class':'tb','data-t':name}); g.appendChild(mk('rect',{x:x,y:y,width:160,height:30,rx:4}));
+    var t=mk('text',{x:x+10,y:y+19,'font-size':9.5,'class':'hd'}); t.textContent=name; g.appendChild(t); sats.appendChild(g);
+    var sx=side<0?x+160:x, ex=side<0?200:360, ey=150+i*34, sy=y+15, mx=(sx+ex)/2;
+    var p=mk('path',{'class':'rel','data-t':name,d:'M'+sx+' '+sy+' H'+mx+' V'+ey+' H'+ex}); rels.appendChild(p);
+    var len=Math.abs(ex-sx)+Math.abs(ey-sy); p.style.setProperty('--len',len); p.style.animationDelay=(.15+i*.08+(side>0?.04:0))+'s';
+    /* pata de gallo (muchos) en la tabla central */
+    var cx=ex, d=side<0?-8:8; rels.appendChild(mk('path',{'class':'rel','data-t':name,d:'M'+(cx+d)+' '+ey+' L'+cx+' '+(ey-5)+' M'+(cx+d)+' '+ey+' L'+cx+' '+(ey+5),style:'stroke-dasharray:none;stroke-dashoffset:0;animation:none'}));
+    g.addEventListener('mouseenter',function(){focus(name)}); g.addEventListener('mouseleave',unfocus);
   }
-  bEs.onclick=function(){setLang('es',true)}; bEn.onclick=function(){setLang('en',true)};
+  L.forEach(function(n,i){add(n,2,ys[i],-1,i)}); R.forEach(function(n,i){add(n,398,ys[i],1,i)});
+  function focus(n){er.classList.add('focus');er.querySelectorAll('[data-t]').forEach(function(e){var t=e.getAttribute('data-t');e.classList.toggle('on',t===n||t==='core')})}
+  function unfocus(){er.classList.remove('focus');er.querySelectorAll('.on').forEach(function(e){if(e.getAttribute('data-t')!=='core')e.classList.remove('on')})}
 
-  /* ---------- tema ---------- */
-  var mq=matchMedia('(prefers-color-scheme: dark)');
-  function isDark(){var t=root.getAttribute('data-theme');return t?t==='dark':mq.matches;}
-  document.getElementById('themeBtn').onclick=function(){var n=isDark()?'light':'dark';root.setAttribute('data-theme',n);save('dp-theme',n);};
-  mq.addEventListener&&mq.addEventListener('change',function(){var s=null;try{s=localStorage.getItem('dp-theme')}catch(e){} if(!s)root.removeAttribute('data-theme');});
+  /* aparición */
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');if(x.target.querySelector('#er'))er.classList.add('drawn');io.unobserve(x.target)}})},{threshold:.12});
+    document.querySelectorAll('.rv').forEach(function(e){io.observe(e)})}
+  else{document.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')});er.classList.add('drawn')}
 
-  /* ---------- texto que se escribe ---------- */
-  var typed=document.getElementById('typed'),timer=null;
-  function restartTyping(){
-    clearTimeout(timer); var list=roles[root.getAttribute('data-lang')]||roles.es;
-    typed.textContent=list[0]; if(reduce)return;
-    var i=0,j=list[0].length,del=true;
-    (function tick(){
-      if(del){j--; if(j<=0){del=false;i=(i+1)%list.length;}}
-      else{j++; if(j>=list[i].length){del=true;typed.textContent=list[i];timer=setTimeout(tick,2200);return;}}
-      typed.textContent=list[i].slice(0,Math.max(0,j)); timer=setTimeout(tick,del?40:85);
-    })();
-  }
-  setLang(root.getAttribute('data-lang')||'es',false);
-  clearTimeout(timer); timer=setTimeout(restartTyping,2400);
-
-  /* ---------- cursor y luz ---------- */
-  var mx=innerWidth/2,my=innerHeight/3,cx=mx,cy=my,ring=document.querySelector('.ring'),pin=document.querySelector('.pin');
-  if(fine)document.body.classList.add('fine');
-  addEventListener('pointermove',function(e){mx=e.clientX;my=e.clientY;root.style.setProperty('--mx',mx+'px');root.style.setProperty('--my',my+'px');if(e.pointerType==='mouse')document.body.classList.add('moved');},{passive:true});
-  document.querySelectorAll('a,button,.work,.honor').forEach(function(el){el.addEventListener('pointerenter',function(){ring.classList.add('big')});el.addEventListener('pointerleave',function(){ring.classList.remove('big')});});
-
-  /* ---------- polvo de oro ---------- */
-  var cv=document.getElementById('dust'),ctx=cv.getContext('2d'),W,H,motes=[];
-  function dustColor(){return getComputedStyle(root).getPropertyValue('--dust').trim()||'150,112,40';}
-  var dc=dustColor(); new MutationObserver(function(){dc=dustColor()}).observe(root,{attributes:true,attributeFilter:['data-theme']}); mq.addEventListener&&mq.addEventListener('change',function(){dc=dustColor()});
-  function mote(any){return{x:Math.random()*W,y:any?Math.random()*H:H+10,r:.6+Math.random()*2.4,vx:(Math.random()-.5)*.15,vy:-(.08+Math.random()*.3),tw:Math.random()*6.28,s:.4+Math.random()*.6};}
-  function size(){var d=Math.min(2,devicePixelRatio||1);W=innerWidth;H=innerHeight;cv.width=W*d;cv.height=H*d;ctx.setTransform(d,0,0,d,0,0);var n=Math.round(Math.min(120,Math.max(40,W*H/14000)));motes=[];for(var i=0;i<n;i++)motes.push(mote(true));}
-  size(); addEventListener('resize',size);
-  var t=0;
-  function frame(){
-    t+=.016; cx+=(mx-cx)*.2; cy+=(my-cy)*.2;
-    if(fine){ring.style.transform='translate('+cx+'px,'+cy+'px)';pin.style.transform='translate('+mx+'px,'+my+'px)';}
-    ctx.clearRect(0,0,W,H);
-    for(var i=0;i<motes.length;i++){var m=motes[i],dx=m.x-mx,dy=m.y-my,d=Math.sqrt(dx*dx+dy*dy);
-      if(d<140&&d>0){var f=(1-d/140);m.vx+= -dy/d*f*.12 + dx/d*f*.05; m.vy+= dx/d*f*.12 + dy/d*f*.05;}
-      m.vx*=.97; m.vy=m.vy*.97-.004; m.x+=m.vx; m.y+=m.vy;
-      if(m.y<-10||m.x<-20||m.x>W+20){motes[i]=mote(false);continue;}
-      var a=(.25+.55*(.5+.5*Math.sin(t*2+m.tw)))*m.s + (d<140?(1-d/140)*.5:0);
-      ctx.beginPath();ctx.fillStyle='rgba('+dc+','+Math.min(1,a)+')';ctx.arc(m.x,m.y,m.r,0,6.283);ctx.fill();
-      if(m.r>2.1){ctx.strokeStyle='rgba('+dc+','+(a*.5)+')';ctx.lineWidth=.6;ctx.beginPath();ctx.moveTo(m.x-m.r*2.4,m.y);ctx.lineTo(m.x+m.r*2.4,m.y);ctx.moveTo(m.x,m.y-m.r*2.4);ctx.lineTo(m.x,m.y+m.r*2.4);ctx.stroke();}
-    }
-    requestAnimationFrame(frame);
-  }
-  if(reduce){motes.forEach(function(m){ctx.beginPath();ctx.fillStyle='rgba('+dc+',.4)';ctx.arc(m.x,m.y,m.r,0,6.283);ctx.fill();});}else requestAnimationFrame(frame);
-  addEventListener('pointerdown',function(e){if(reduce)return;for(var k=0;k<14;k++){var m=mote(false);m.x=e.clientX;m.y=e.clientY;var a=Math.random()*6.283,s=.6+Math.random()*2.2;m.vx=Math.cos(a)*s;m.vy=Math.sin(a)*s;m.r=1+Math.random()*2.2;m.s=1;motes.push(m);} if(motes.length>200)motes.splice(0,motes.length-200);});
-
-  /* ---------- carta: gira con el cursor y se voltea con un clic ---------- */
-  var crest=document.getElementById('crest');
-  if(fine&&!reduce)addEventListener('pointermove',function(e){var r=crest.getBoundingClientRect(),x=(e.clientX-(r.left+r.width/2))/innerWidth,y=(e.clientY-(r.top+r.height/2))/innerHeight;crest.style.transform='perspective(800px) rotateY('+(x*22)+'deg) rotateX('+(-y*22)+'deg)';},{passive:true});
-
-  /* ---------- obras: brillo e inclinación ---------- */
-  document.querySelectorAll('.tilt').forEach(function(c){
-    c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;c.style.setProperty('--px',x*100+'%');c.style.setProperty('--py',y*100+'%');if(fine&&!reduce)c.style.transform='perspective(1400px) rotateX('+((.5-y)*3.5)+'deg) rotateY('+((x-.5)*4.5)+'deg)';});
-    c.addEventListener('pointerleave',function(){c.style.transform='';});
-  });
-  document.querySelectorAll('.mag').forEach(function(b){
-    b.addEventListener('pointermove',function(e){if(!fine||reduce)return;var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.15)+'px,'+((e.clientY-r.top-r.height/2)*.25)+'px)';});
-    b.addEventListener('pointerleave',function(){b.style.transform='';});
-  });
-
-  /* ---------- aparición suave (contenido siempre visible) ---------- */
-  if('IntersectionObserver' in window&&!reduce){var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}})},{threshold:.08});document.querySelectorAll('.rv').forEach(function(r){io.observe(r)});}
-  else document.querySelectorAll('.rv').forEach(function(r){r.classList.add('in')});
-
-  /* ---------- copiar correo ---------- */
+  /* copiar correo */
   var toast=document.getElementById('toast');
-  document.getElementById('copyMail').onclick=function(){
-    var es=root.getAttribute('data-lang')==='es';
-    var p=navigator.clipboard?navigator.clipboard.writeText('davidplazasmorales@gmail.com'):Promise.reject();
-    p.then(function(){toast.textContent=es?'Correo copiado':'Email copied';},function(){toast.textContent=es?'Selecciona el correo para copiarlo':'Select the address to copy it';});
-    setTimeout(function(){toast.textContent='';},2600);
-  };
+  document.getElementById('copyMail').addEventListener('click',function(){var m=this.getAttribute('data-mail');
+    function ok(){toast.textContent=root.getAttribute('data-lang')==='es'?'Correo copiado':'Email copied';toast.classList.add('show');setTimeout(function(){toast.classList.remove('show')},1800)}
+    if(navigator.clipboard)navigator.clipboard.writeText(m).then(ok,function(){location.href='mailto:'+m});else location.href='mailto:'+m});
 })();
 </script>
 </body>
